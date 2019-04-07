@@ -6,6 +6,8 @@
         <th>Pass</th>
         <th>State</th>
         <th>Rol</th>
+        <th>Create Time</th>
+        <th>Update Time</th>
             <th colspan="3">Action</th>
         </tr>
     </thead>
@@ -17,6 +19,8 @@
             <td>{!! $user->Pass !!}</td>
             <td>{!! $user->State !!}</td>
             <td>{!! $user->Rol !!}</td>
+            <td>{!! $user->create_time !!}</td>
+            <td>{!! $user->update_time !!}</td>
             <td>
                 {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

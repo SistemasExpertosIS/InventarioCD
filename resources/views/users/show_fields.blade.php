@@ -34,3 +34,21 @@
     <p>{!! $user->Rol !!}</p>
 </div>
 
+<!-- Create Time Field -->
+<div class="form-group">
+    {!! Form::label('create_time', 'Create Time:') !!}
+    <p>{!! $user->create_time !!}</p>
+</div>
+
+<!-- Update Time Field -->
+<div class="form-group">
+    {!! Form::label('update_time', 'Update Time:') !!}
+    <p>{!! $user->update_time !!}</p>
+</div>
+
+<!-- Deleted At Field -->
+<div class="form-group">
+    {!! Form::label('deleted_at', 'Deleted At:') !!}
+    <p>{!! $user->deleted_at !!}</p>
+</div>
+

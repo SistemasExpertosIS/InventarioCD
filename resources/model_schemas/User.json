@@ -66,15 +66,36 @@
         "inIndex": true
     },
     {
-        "type": "relation",
-        "relation": "1tm,Branch"
+        "name": "create_time",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
     },
     {
-        "type": "relation",
-        "relation": "1tm,Transferm"
+        "name": "update_time",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true
     },
     {
-        "type": "relation",
-        "relation": "1tm,Transferm"
+        "name": "deleted_at",
+        "dbType": "datetime",
+        "htmlType": "date",
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
     }
 ]

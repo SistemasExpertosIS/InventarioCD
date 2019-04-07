@@ -13,7 +13,7 @@ class Timestamps extends Migration
      */
     public function up()
     {
-        Schema::table('user', function(Blueprint $table){
+        Schema::table('User', function(Blueprint $table){
             $table->timestamps();
             //$table->timestamp('deleted_at')->nullable();
 

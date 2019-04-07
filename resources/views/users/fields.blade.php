@@ -28,6 +28,36 @@
     {!! Form::text('Rol', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Create Time Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('create_time', 'Create Time:') !!}
+    {!! Form::date('create_time', null, ['class' => 'form-control','id'=>'create_time']) !!}
+</div>
+
+@section('scripts')
+    <script type="text/javascript">
+        $('#create_time').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm:ss',
+            useCurrent: false
+        })
+    </script>
+@endsection
+
+<!-- Update Time Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('update_time', 'Update Time:') !!}
+    {!! Form::date('update_time', null, ['class' => 'form-control','id'=>'update_time']) !!}
+</div>
+
+@section('scripts')
+    <script type="text/javascript">
+        $('#update_time').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm:ss',
+            useCurrent: false
+        })
+    </script>
+@endsection
+
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}

@@ -8,16 +8,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class User
  * @package App\Models
- * @version April 6, 2019, 2:24 pm UTC
+ * @version April 7, 2019, 12:00 am UTC
  *
- * @property \Illuminate\Database\Eloquent\Collection branches
- * @property \Illuminate\Database\Eloquent\Collection transferms
- * @property \Illuminate\Database\Eloquent\Collection transferms
  * @property string Name
  * @property string Email
  * @property string Pass
  * @property string State
  * @property string Rol
+ * @property string|\Carbon\Carbon create_time
+ * @property string|\Carbon\Carbon update_time
  */
 class User extends Model
 {
@@ -37,7 +36,9 @@ class User extends Model
         'Email',
         'Pass',
         'State',
-        'Rol'
+        'Rol',
+        'create_time',
+        'update_time'
     ];
 
     /**
@@ -63,21 +64,5 @@ class User extends Model
         'idUser' => 'required'
     ];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
-    public function branches()
-    {
-        return $this->hasMany(\App\Models\Branch::class);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
-    public function transferms()
-    {
-        return $this->hasMany(\App\Models\Transferm::class);
-    }
-
-
+    
 }

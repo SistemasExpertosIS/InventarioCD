@@ -46,7 +46,10 @@ trait MakeUserTrait
             'Email' => $fake->word,
             'Pass' => $fake->word,
             'State' => $fake->word,
-            'Rol' => $fake->word
+            'Rol' => $fake->word,
+            'create_time' => $fake->date('Y-m-d H:i:s'),
+            'update_time' => $fake->date('Y-m-d H:i:s'),
+            'deleted_at' => $fake->date('Y-m-d H:i:s')
         ], $userFields);
     }
 }
