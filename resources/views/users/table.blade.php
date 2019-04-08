@@ -3,11 +3,9 @@
         <tr>
             <th>Name</th>
         <th>Email</th>
-        <th>Pass</th>
+        <th>Password</th>
         <th>State</th>
         <th>Rol</th>
-        <th>Create Time</th>
-        <th>Update Time</th>
             <th colspan="3">Action</th>
         </tr>
     </thead>
@@ -15,12 +13,10 @@
     @foreach($users as $user)
         <tr>
             <td>{!! $user->Name !!}</td>
-            <td>{!! $user->Email !!}</td>
-            <td>{!! $user->Pass !!}</td>
+            <td>{!! $user->email !!}</td>
+            <td>{!! $user->password !!}</td>
             <td>{!! $user->State !!}</td>
             <td>{!! $user->Rol !!}</td>
-            <td>{!! $user->create_time !!}</td>
-            <td>{!! $user->update_time !!}</td>
             <td>
                 {!! Form::open(['route' => ['users.destroy', $user->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

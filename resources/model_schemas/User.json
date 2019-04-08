@@ -1,20 +1,9 @@
 [
     {
-        "name": "idUser",
-        "dbType": "integer,false",
-        "htmlType": null,
-        "validations": "required",
-        "searchable": false,
-        "fillable": false,
-        "primary": true,
-        "inForm": false,
-        "inIndex": false
-    },
-    {
         "name": "Name",
         "dbType": "string",
         "htmlType": "text",
-        "validations": null,
+        "validations": "required",
         "searchable": true,
         "fillable": true,
         "primary": false,
@@ -22,10 +11,10 @@
         "inIndex": true
     },
     {
-        "name": "Email",
+        "name": "email",
         "dbType": "string",
         "htmlType": "text",
-        "validations": null,
+        "validations": "required",
         "searchable": true,
         "fillable": true,
         "primary": false,
@@ -33,10 +22,10 @@
         "inIndex": true
     },
     {
-        "name": "Pass",
+        "name": "password",
         "dbType": "string",
         "htmlType": "text",
-        "validations": null,
+        "validations": "required",
         "searchable": true,
         "fillable": true,
         "primary": false,
@@ -47,7 +36,7 @@
         "name": "State",
         "dbType": "string",
         "htmlType": "text",
-        "validations": null,
+        "validations": "required",
         "searchable": true,
         "fillable": true,
         "primary": false,
@@ -58,29 +47,7 @@
         "name": "Rol",
         "dbType": "string",
         "htmlType": "text",
-        "validations": null,
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true
-    },
-    {
-        "name": "create_time",
-        "dbType": "datetime",
-        "htmlType": "date",
-        "validations": null,
-        "searchable": true,
-        "fillable": true,
-        "primary": false,
-        "inForm": true,
-        "inIndex": true
-    },
-    {
-        "name": "update_time",
-        "dbType": "datetime",
-        "htmlType": "date",
-        "validations": null,
+        "validations": "required",
         "searchable": true,
         "fillable": true,
         "primary": false,
@@ -97,5 +64,17 @@
         "primary": false,
         "inForm": false,
         "inIndex": false
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Branch"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Transferm"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Transferm"
     }
 ]

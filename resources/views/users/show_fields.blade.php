@@ -1,9 +1,3 @@
-<!-- Iduser Field -->
-<div class="form-group">
-    {!! Form::label('idUser', 'Iduser:') !!}
-    <p>{!! $user->idUser !!}</p>
-</div>
-
 <!-- Name Field -->
 <div class="form-group">
     {!! Form::label('Name', 'Name:') !!}
@@ -12,14 +6,14 @@
 
 <!-- Email Field -->
 <div class="form-group">
-    {!! Form::label('Email', 'Email:') !!}
-    <p>{!! $user->Email !!}</p>
+    {!! Form::label('email', 'Email:') !!}
+    <p>{!! $user->email !!}</p>
 </div>
 
-<!-- Pass Field -->
+<!-- Password Field -->
 <div class="form-group">
-    {!! Form::label('Pass', 'Pass:') !!}
-    <p>{!! $user->Pass !!}</p>
+    {!! Form::label('password', 'Password:') !!}
+    <p>{!! $user->password !!}</p>
 </div>
 
 <!-- State Field -->
@@ -32,18 +26,6 @@
 <div class="form-group">
     {!! Form::label('Rol', 'Rol:') !!}
     <p>{!! $user->Rol !!}</p>
-</div>
-
-<!-- Create Time Field -->
-<div class="form-group">
-    {!! Form::label('create_time', 'Create Time:') !!}
-    <p>{!! $user->create_time !!}</p>
-</div>
-
-<!-- Update Time Field -->
-<div class="form-group">
-    {!! Form::label('update_time', 'Update Time:') !!}
-    <p>{!! $user->update_time !!}</p>
 </div>
 
 <!-- Deleted At Field -->

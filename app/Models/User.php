@@ -8,21 +8,22 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class User
  * @package App\Models
- * @version April 7, 2019, 12:00 am UTC
+ * @version April 8, 2019, 2:58 am UTC
  *
+ * @property \Illuminate\Database\Eloquent\Collection branches
+ * @property \Illuminate\Database\Eloquent\Collection transferms
+ * @property \Illuminate\Database\Eloquent\Collection transferms
  * @property string Name
- * @property string Email
- * @property string Pass
+ * @property string email
+ * @property string password
  * @property string State
  * @property string Rol
- * @property string|\Carbon\Carbon create_time
- * @property string|\Carbon\Carbon update_time
  */
 class User extends Model
 {
     use SoftDeletes;
 
-    public $table = 'user';
+    public $table = 'users';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
@@ -33,12 +34,10 @@ class User extends Model
 
     public $fillable = [
         'Name',
-        'Email',
-        'Pass',
+        'email',
+        'password',
         'State',
-        'Rol',
-        'create_time',
-        'update_time'
+        'Rol'
     ];
 
     /**
@@ -47,10 +46,9 @@ class User extends Model
      * @var array
      */
     protected $casts = [
-        'idUser' => 'integer',
         'Name' => 'string',
-        'Email' => 'string',
-        'Pass' => 'string',
+        'email' => 'string',
+        'password' => 'string',
         'State' => 'string',
         'Rol' => 'string'
     ];
@@ -61,8 +59,27 @@ class User extends Model
      * @var array
      */
     public static $rules = [
-        'idUser' => 'required'
+        'Name' => 'required',
+        'email' => 'required',
+        'password' => 'required',
+        'State' => 'required',
+        'Rol' => 'required'
     ];
 
-    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function branches()
+    {
+        return $this->hasMany(\App\Models\Branch::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function transferms()
+    {
+        return $this->hasMany(\App\Models\Transferm::class);
+    }
+
 }

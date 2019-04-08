@@ -43,12 +43,10 @@ trait MakeUserTrait
 
         return array_merge([
             'Name' => $fake->word,
-            'Email' => $fake->word,
-            'Pass' => $fake->word,
+            'email' => $fake->word,
+            'password' => $fake->word,
             'State' => $fake->word,
             'Rol' => $fake->word,
-            'create_time' => $fake->date('Y-m-d H:i:s'),
-            'update_time' => $fake->date('Y-m-d H:i:s'),
             'deleted_at' => $fake->date('Y-m-d H:i:s')
         ], $userFields);
     }
