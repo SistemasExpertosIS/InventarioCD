@@ -1,5 +1,16 @@
 [
     {
+        "name": "id",
+        "dbType": "integer,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
         "name": "Name",
         "dbType": "string",
         "htmlType": "text",

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class User
  * @package App\Models
- * @version April 8, 2019, 2:58 am UTC
+ * @version April 9, 2019, 10:59 am UTC
  *
  * @property \Illuminate\Database\Eloquent\Collection branches
  * @property \Illuminate\Database\Eloquent\Collection transferms
@@ -46,6 +46,7 @@ class User extends Model
      * @var array
      */
     protected $casts = [
+        'id' => 'integer',
         'Name' => 'string',
         'email' => 'string',
         'password' => 'string',

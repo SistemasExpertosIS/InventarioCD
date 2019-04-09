@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateUserRequest;
 use App\Repositories\UserRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
@@ -57,7 +58,13 @@ class UserController extends AppBaseController
     {
         $input = $request->all();
 
-        $user = $this->userRepository->create($input);
+        $user = $this->userRepository->create([
+            'Name' => $request['Name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            'State' => $request['State'],
+            'Rol' => $request['Rol']
+        ]);
 
         Flash::success('User saved successfully.');
 

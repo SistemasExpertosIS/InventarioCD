@@ -24,3 +24,5 @@ Route::resource('users', 'UserAPIController');
 Route::resource('users', 'UserAPIController');
 
 Route::resource('users', 'UserAPIController');
+
+Route::resource('users', 'UserAPIController');
