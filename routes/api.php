@@ -38,3 +38,5 @@ Route::resource('boxes', 'BoxAPIController');
 Route::resource('boxes', 'BoxAPIController');
 
 Route::resource('boxes', 'BoxAPIController');
+
+Route::resource('products', 'ProductAPIController');
