@@ -70,3 +70,11 @@
     <a href="{!! route('transports.index') !!}"><i class="fa fa-edit"></i><span>Transports</span></a>
 </li>
 
+<li class="{{ Request::is('movementTypes*') ? 'active' : '' }}">
+    <a href="{!! route('movementTypes.index') !!}"><i class="fa fa-edit"></i><span>Movement Types</span></a>
+</li>
+
+<li class="{{ Request::is('movementTypes*') ? 'active' : '' }}">
+    <a href="{!! route('movementTypes.index') !!}"><i class="fa fa-edit"></i><span>Movement Types</span></a>
+</li>
+

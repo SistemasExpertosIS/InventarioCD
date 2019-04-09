@@ -44,3 +44,7 @@ Route::resource('boxes', 'BoxController');
 Route::resource('products', 'ProductController');
 
 Route::resource('transports', 'TransportController');
+
+Route::resource('movementTypes', 'MovementTypeController');
+
+Route::resource('movementTypes', 'MovementTypeController');
