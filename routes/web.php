@@ -28,3 +28,15 @@ Route::resource('users', 'UserController');
 Route::resource('users', 'UserController');
 
 Route::resource('users', 'UserController');
+
+Route::resource('boxes', 'BoxController');
+
+Route::resource('boxes', 'BoxController');
+
+Route::resource('boxes', 'BoxController');
+
+Route::resource('boxes', 'BoxController');
+
+Route::resource('boxes', 'BoxController');
+
+Route::resource('boxes', 'BoxController');

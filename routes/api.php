@@ -26,3 +26,15 @@ Route::resource('users', 'UserAPIController');
 Route::resource('users', 'UserAPIController');
 
 Route::resource('users', 'UserAPIController');
+
+Route::resource('boxes', 'BoxAPIController');
+
+Route::resource('boxes', 'BoxAPIController');
+
+Route::resource('boxes', 'BoxAPIController');
+
+Route::resource('boxes', 'BoxAPIController');
+
+Route::resource('boxes', 'BoxAPIController');
+
+Route::resource('boxes', 'BoxAPIController');
