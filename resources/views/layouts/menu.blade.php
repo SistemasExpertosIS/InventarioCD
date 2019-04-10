@@ -82,3 +82,7 @@
     <a href="{!! route('branches.index') !!}"><i class="fa fa-edit"></i><span>Branches</span></a>
 </li>
 
+<li class="{{ Request::is('transferMs*') ? 'active' : '' }}">
+    <a href="{!! route('transferMs.index') !!}"><i class="fa fa-edit"></i><span>Transfer Ms</span></a>
+</li>
+

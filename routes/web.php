@@ -50,3 +50,5 @@ Route::resource('movementTypes', 'MovementTypeController');
 Route::resource('movementTypes', 'MovementTypeController');
 
 Route::resource('branches', 'BranchController');
+
+Route::resource('transferMs', 'TransferMController');
