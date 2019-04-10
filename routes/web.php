@@ -48,3 +48,5 @@ Route::resource('transports', 'TransportController');
 Route::resource('movementTypes', 'MovementTypeController');
 
 Route::resource('movementTypes', 'MovementTypeController');
+
+Route::resource('branches', 'BranchController');
