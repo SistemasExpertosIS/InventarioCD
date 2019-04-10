@@ -86,3 +86,11 @@
     <a href="{!! route('transferMs.index') !!}"><i class="fa fa-edit"></i><span>Transfer Ms</span></a>
 </li>
 
+<li class="{{ Request::is('transferDs*') ? 'active' : '' }}">
+    <a href="{!! route('transferDs.index') !!}"><i class="fa fa-edit"></i><span>Transfer Ds</span></a>
+</li>
+
+<li class="{{ Request::is('inventories*') ? 'active' : '' }}">
+    <a href="{!! route('inventories.index') !!}"><i class="fa fa-edit"></i><span>Inventories</span></a>
+</li>
+

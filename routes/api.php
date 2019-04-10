@@ -50,3 +50,7 @@ Route::resource('movement_types', 'MovementTypeAPIController');
 Route::resource('branches', 'BranchAPIController');
 
 Route::resource('transfer_ms', 'TransferMAPIController');
+
+Route::resource('transfer_ds', 'TransferDAPIController');
+
+Route::resource('inventories', 'InventoryAPIController');
