@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -19,7 +22,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string State
  * @property string Rol
  */
-class User extends Model
+class User extends Authenticatable
 {
     use SoftDeletes;
 
