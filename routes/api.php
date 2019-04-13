@@ -20,30 +20,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('users', 'UserAPIController');
 
-
-Route::resource('users', 'UserAPIController');
-
-Route::resource('users', 'UserAPIController');
-
-Route::resource('users', 'UserAPIController');
-
-Route::resource('boxes', 'BoxAPIController');
-
-Route::resource('boxes', 'BoxAPIController');
-
-Route::resource('boxes', 'BoxAPIController');
-
-Route::resource('boxes', 'BoxAPIController');
-
-Route::resource('boxes', 'BoxAPIController');
-
 Route::resource('boxes', 'BoxAPIController');
 
 Route::resource('products', 'ProductAPIController');
 
 Route::resource('transports', 'TransportAPIController');
-
-Route::resource('movement_types', 'MovementTypeAPIController');
 
 Route::resource('movement_types', 'MovementTypeAPIController');
 
