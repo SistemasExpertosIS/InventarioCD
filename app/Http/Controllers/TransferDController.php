@@ -19,6 +19,7 @@ class TransferDController extends AppBaseController
     public function __construct(TransferDRepository $transferDRepo)
     {
         $this->transferDRepository = $transferDRepo;
+        $this->middleware('auth');
     }
 
     /**

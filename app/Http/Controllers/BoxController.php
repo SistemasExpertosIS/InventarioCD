@@ -19,6 +19,7 @@ class BoxController extends AppBaseController
     public function __construct(BoxRepository $boxRepo)
     {
         $this->boxRepository = $boxRepo;
+        $this->middleware('auth');
     }
 
     /**

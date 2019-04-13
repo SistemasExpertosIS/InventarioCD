@@ -19,6 +19,7 @@ class MovementTypeController extends AppBaseController
     public function __construct(MovementTypeRepository $movementTypeRepo)
     {
         $this->movementTypeRepository = $movementTypeRepo;
+        $this->middleware('auth');
     }
 
     /**

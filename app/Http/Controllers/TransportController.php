@@ -19,6 +19,7 @@ class TransportController extends AppBaseController
     public function __construct(TransportRepository $transportRepo)
     {
         $this->transportRepository = $transportRepo;
+        $this->middleware('auth');
     }
 
     /**

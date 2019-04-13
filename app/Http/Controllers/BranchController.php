@@ -19,6 +19,7 @@ class BranchController extends AppBaseController
     public function __construct(BranchRepository $branchRepo)
     {
         $this->branchRepository = $branchRepo;
+        $this->middleware('auth');
     }
 
     /**

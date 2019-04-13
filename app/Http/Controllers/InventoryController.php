@@ -19,6 +19,7 @@ class InventoryController extends AppBaseController
     public function __construct(InventoryRepository $inventoryRepo)
     {
         $this->inventoryRepository = $inventoryRepo;
+        $this->middleware('auth');
     }
 
     /**
