@@ -1,9 +1,9 @@
 <table class="table table-responsive" id="boxes-table">
     <thead>
         <tr>
-            <th>Quantity</th>
-        <th>Description</th>
-            <th colspan="3">Action</th>
+            <th>Cantidad</th>
+        <th>Descripción</th>
+            <th colspan="3">Acción</th>
         </tr>
     </thead>
     <tbody>
