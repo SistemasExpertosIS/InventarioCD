@@ -16,15 +16,14 @@
             <td>{!! $branch->Abv !!}</td>
             <td>{!! $branch->idUser !!}</td>
             <td>
-                {!! Form::open(['route' => ['branches.destroy', $branch->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
                     <a href="{!! route('branches.show', [$branch->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('branches.edit', [$branch->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarSucursal"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
-                {!! Form::close() !!}
             </td>
         </tr>
+        @include('branches.confirmdelete')
     @endforeach
     </tbody>
 </table>
