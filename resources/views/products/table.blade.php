@@ -1,11 +1,11 @@
 <table class="table table-responsive" id="products-table">
     <thead>
         <tr>
-            <th>Name</th>
-        <th>Code</th>
-        <th>Description</th>
-        <th>State</th>
-            <th colspan="3">Action</th>
+            <th>Nombre</th>
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>Estado</th>
+            <th colspan="3">Acción</th>
         </tr>
     </thead>
     <tbody>

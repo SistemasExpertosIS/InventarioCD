@@ -1,29 +1,29 @@
-<!-- Name Field -->
+<!-- Nombre -->
 <div class="form-group col-sm-6">
-    {!! Form::label('Name', 'Name:') !!}
+    {!! Form::label('Name', 'Nombre:') !!}
     {!! Form::text('Name', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Code Field -->
+<!-- Código -->
 <div class="form-group col-sm-6">
-    {!! Form::label('Code', 'Code:') !!}
+    {!! Form::label('Code', 'Código:') !!}
     {!! Form::text('Code', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Description Field -->
+<!-- Descripción -->
 <div class="form-group col-sm-6">
-    {!! Form::label('Description', 'Description:') !!}
+    {!! Form::label('Description', 'Descripción:') !!}
     {!! Form::text('Description', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- State Field -->
+<!-- Estado -->
 <div class="form-group col-sm-6">
-    {!! Form::label('State', 'State:') !!}
+    {!! Form::label('State', 'Estado:') !!}
     {!! Form::text('State', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Submit Field -->
+<!-- Guardar -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('products.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('products.index') !!}" class="btn btn-default">Cancelar</a>
 </div>
