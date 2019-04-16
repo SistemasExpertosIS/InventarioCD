@@ -16,15 +16,14 @@
             <td>{!! $product->Description !!}</td>
             <td>{!! $product->State !!}</td>
             <td>
-                {!! Form::open(['route' => ['products.destroy', $product->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
                     <a href="{!! route('products.show', [$product->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('products.edit', [$product->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarProducto"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
-                {!! Form::close() !!}
             </td>
         </tr>
+        @include('products.confirmdelete')
     @endforeach
     </tbody>
 </table>
