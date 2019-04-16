@@ -18,15 +18,15 @@
             <td>{!! $transferD->idBox !!}</td>
             <td>{!! $transferD->idProduct !!}</td>
             <td>
-                {!! Form::open(['route' => ['transferDs.destroy', $transferD->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
                     <a href="{!! route('transferDs.show', [$transferD->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('transferDs.edit', [$transferD->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferD"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
                 {!! Form::close() !!}
             </td>
         </tr>
+        @include('transfer_ds.confirmdelete')
     @endforeach
     </tbody>
 </table>

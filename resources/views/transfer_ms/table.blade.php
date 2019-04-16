@@ -21,16 +21,15 @@
             <td>{!! $transferM->idBranchReceives !!}</td>
             <td>{!! $transferM->idBranchSends !!}</td>
             <td>{!! $transferM->idTransport !!}</td>
-            <td>
-                {!! Form::open(['route' => ['transferMs.destroy', $transferM->id], 'method' => 'delete']) !!}
+            <td>                
                 <div class='btn-group'>
                     <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('transferMs.edit', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferM"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
-                {!! Form::close() !!}
             </td>
         </tr>
+        @include('transfer_ms.confirmdelete')
     @endforeach
     </tbody>
 </table>
