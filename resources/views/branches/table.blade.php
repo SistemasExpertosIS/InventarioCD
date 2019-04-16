@@ -1,11 +1,11 @@
 <table class="table table-responsive" id="branches-table">
     <thead>
         <tr>
-            <th>Name</th>
-        <th>City</th>
-        <th>Abv</th>
-        <th>Iduser</th>
-            <th colspan="3">Action</th>
+            <th>Nombre</th>
+        <th>Ciudad</th>
+        <th>Abreviatura</th>
+        <th>Usuario</th>
+            <th colspan="3">Acción</th>
         </tr>
     </thead>
     <tbody>

@@ -1,48 +1,46 @@
-<!-- Id Field -->
+<!-- Id -->
 <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
     <p>{!! $branch->id !!}</p>
 </div>
 
-<!-- Name Field -->
+<!-- Nombre -->
 <div class="form-group">
-    {!! Form::label('Name', 'Name:') !!}
+    {!! Form::label('Name', 'Nombre:') !!}
     <p>{!! $branch->Name !!}</p>
 </div>
 
-<!-- City Field -->
+<!-- Ciudad -->
 <div class="form-group">
-    {!! Form::label('City', 'City:') !!}
+    {!! Form::label('City', 'Ciudad:') !!}
     <p>{!! $branch->City !!}</p>
 </div>
 
-<!-- Abv Field -->
+<!-- Abreviatura -->
 <div class="form-group">
-    {!! Form::label('Abv', 'Abv:') !!}
+    {!! Form::label('Abv', 'Abreviatura:') !!}
     <p>{!! $branch->Abv !!}</p>
 </div>
 
-<!-- Iduser Field -->
+<!-- Usuario -->
 <div class="form-group">
-    {!! Form::label('idUser', 'Iduser:') !!}
+    {!! Form::label('idUser', 'Usuario:') !!}
     <p>{!! $branch->idUser !!}</p>
 </div>
 
-<!-- Created At Field -->
+<!-- Created
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}
     <p>{!! $branch->created_at !!}</p>
 </div>
 
-<!-- Updated At Field -->
 <div class="form-group">
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{!! $branch->updated_at !!}</p>
 </div>
 
-<!-- Deleted At Field -->
 <div class="form-group">
     {!! Form::label('deleted_at', 'Deleted At:') !!}
     <p>{!! $branch->deleted_at !!}</p>
-</div>
+</div>-->
 

@@ -1,29 +1,29 @@
-<!-- Name Field -->
+<!-- Nombre-->
 <div class="form-group col-sm-6">
-    {!! Form::label('Name', 'Name:') !!}
+    {!! Form::label('Name', 'Nombre:') !!}
     {!! Form::text('Name', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- City Field -->
+<!-- Ciudad -->
 <div class="form-group col-sm-6">
-    {!! Form::label('City', 'City:') !!}
+    {!! Form::label('City', 'Ciudad:') !!}
     {!! Form::text('City', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Abv Field -->
+<!-- Abreviatura -->
 <div class="form-group col-sm-6">
-    {!! Form::label('Abv', 'Abv:') !!}
+    {!! Form::label('Abv', 'Abreviatura:') !!}
     {!! Form::text('Abv', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Iduser Field -->
+<!-- Usuario -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idUser', 'Iduser:') !!}
+    {!! Form::label('idUser', 'Usuario:') !!}
     {!! Form::number('idUser', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Submit Field -->
+<!-- Guardar -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('branches.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('branches.index') !!}" class="btn btn-default">Cancelar</a>
 </div>
