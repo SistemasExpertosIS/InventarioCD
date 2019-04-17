@@ -21,12 +21,11 @@
                 <div class='btn-group'>
                     <a href="{!! route('transferDs.show', [$transferD->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('transferDs.edit', [$transferD->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferD"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferD" data-id="{{ $transferD->id }}"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
                 {!! Form::close() !!}
             </td>
-        </tr>
-        @include('transfer_ds.confirmdelete')
+        </tr>        
     @endforeach
     </tbody>
 </table>

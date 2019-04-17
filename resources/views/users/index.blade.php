@@ -22,5 +22,15 @@
         
         </div>
     </div>
+    @include('users.confirmdelete')
+    @section('scripts')
+    <script>
+        $('#borrarUsuario').on('show.bs.modal', function (e) {
+            var dataId = $(e.relatedTarget).data('id');
+            var form = $('#formBorrarUsuario');
+            form.attr('action', form.attr('action').replace('REQ_ID', dataId));
+        });
+    </script>
+    @endsection
 @endsection
 

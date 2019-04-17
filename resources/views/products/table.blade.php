@@ -19,11 +19,10 @@
                 <div class='btn-group'>
                     <a href="{!! route('products.show', [$product->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('products.edit', [$product->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarProducto"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarProducto" data-id="{{ $product->id }}"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
             </td>
-        </tr>
-        @include('products.confirmdelete')
+        </tr>        
     @endforeach
     </tbody>
 </table>

@@ -17,11 +17,10 @@
                 <div class='btn-group'>
                     <a href="{!! route('transports.show', [$transport->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('transports.edit', [$transport->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransporte"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransporte" data-id="{{ $transport->id }}"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
             </td>
-        </tr>
-        @include('transports.confirmdelete')
+        </tr>        
     @endforeach
     </tbody>
 </table>

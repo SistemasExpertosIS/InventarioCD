@@ -25,11 +25,10 @@
                 <div class='btn-group'>
                     <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('transferMs.edit', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferM"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferM" data-id="{{ $transferM->id }}"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
             </td>
-        </tr>
-        @include('transfer_ms.confirmdelete')
+        </tr>        
     @endforeach
     </tbody>
 </table>

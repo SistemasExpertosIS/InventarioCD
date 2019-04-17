@@ -9,7 +9,7 @@
       </div>
       <div class="modal-body body-borrar">
         <h4>¿Está seguro(a) de eliminar este registro?</h4>
-        {!! Form::open(['route' => ['transports.destroy', $transport->id], 'method' => 'delete']) !!} 
+        {!! Form::open(['route' => ['transports.destroy', 'REQ_ID'], 'method' => 'delete', 'id' => 'formBorrarTransporte']) !!} 
       </div>
       <div class="modal-footer footer-borrar">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

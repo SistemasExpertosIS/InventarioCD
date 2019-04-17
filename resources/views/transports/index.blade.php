@@ -22,5 +22,15 @@
         
         </div>
     </div>
+    @include('transports.confirmdelete')
+    @section('scripts')
+    <script>
+        $('#borrarTransporte').on('show.bs.modal', function (e) {
+            var dataId = $(e.relatedTarget).data('id');
+            var form = $('#formBorrarTransporte');
+            form.attr('action', form.attr('action').replace('REQ_ID', dataId));
+        });
+    </script>
+    @endsection
 @endsection
 

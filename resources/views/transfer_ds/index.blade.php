@@ -22,5 +22,15 @@
         
         </div>
     </div>
+    @include('transfer_ds.confirmdelete')
+    @section('scripts')
+    <script>
+        $('#borrarTransferD').on('show.bs.modal', function (e) {
+            var dataId = $(e.relatedTarget).data('id');
+            var form = $('#formBorrarTD');
+            form.attr('action', form.attr('action').replace('REQ_ID', dataId));
+        });
+    </script>
+    @endsection
 @endsection
 

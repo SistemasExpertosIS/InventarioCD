@@ -22,5 +22,15 @@
         
         </div>
     </div>
+    @include('branches.confirmdelete')
+    @section('scripts')
+    <script>
+        $('#borrarSucursal').on('show.bs.modal', function (e) {
+            var dataId = $(e.relatedTarget).data('id');
+            var form = $('#formBorrarSucursal');
+            form.attr('action', form.attr('action').replace('REQ_ID', dataId));
+        });
+    </script>
+    @endsection
 @endsection
 

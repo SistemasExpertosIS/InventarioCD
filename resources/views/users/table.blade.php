@@ -21,11 +21,10 @@
                 <div class='btn-group'>
                     <a href="{!! route('users.show', [$user->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('users.edit', [$user->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarUsuario"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarUsuario" data-id="{{ $user->id }}"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
             </td>
-        </tr>
-        @include('users.confirmdelete')
+        </tr>        
     @endforeach
     </tbody>
 </table>

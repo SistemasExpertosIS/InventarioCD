@@ -22,5 +22,16 @@
         
         </div>
     </div>
+    @include('products.confirmdelete')
+    @section('scripts')
+    <script>
+        $('#borrarProducto').on('show.bs.modal', function (e) {
+            var dataId = $(e.relatedTarget).data('id');
+            var form = $('#formBorrarProducto');
+            form.attr('action', form.attr('action').replace('REQ_ID', dataId));
+        });
+    </script>
+    @endsection
 @endsection
+
 

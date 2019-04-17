@@ -22,5 +22,15 @@
         
         </div>
     </div>
+    @include('inventories.confirmdelete')
+    @section('scripts')
+    <script>
+        $('#borrarInventario').on('show.bs.modal', function (e) {
+            var dataId = $(e.relatedTarget).data('id');
+            var form = $('#formBorrarInventario');
+            form.attr('action', form.attr('action').replace('REQ_ID', dataId));
+        });
+    </script>
+    @endsection
 @endsection
 

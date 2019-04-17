@@ -22,5 +22,15 @@
         
         </div>
     </div>
+    @include('boxes.confirmdelete')
+    @section('scripts')
+    <script>
+        $('#borrarCaja').on('show.bs.modal', function (e) {
+            var dataId = $(e.relatedTarget).data('id');
+            var form = $('#formBorrarCaja');
+            form.attr('action', form.attr('action').replace('REQ_ID', dataId));
+        });
+    </script>
+    @endsection
 @endsection
 

@@ -19,11 +19,10 @@
                 <div class='btn-group'>
                     <a href="{!! route('branches.show', [$branch->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('branches.edit', [$branch->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarSucursal"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarSucursal" data-id="{{ $branch->id }}"><i class="glyphicon glyphicon-trash"></i></a>
                 </div>
             </td>
-        </tr>
-        @include('branches.confirmdelete')
+        </tr>        
     @endforeach
     </tbody>
 </table>
