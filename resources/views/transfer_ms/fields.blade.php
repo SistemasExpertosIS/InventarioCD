@@ -1,47 +1,47 @@
-<!-- Description Field -->
+<!-- Descripción-->
 <div class="form-group col-sm-6">
-    {!! Form::label('Description', 'Description:') !!}
+    {!! Form::label('Description', 'Descripción:') !!}
     {!! Form::text('Description', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idmovementtype Field -->
+<!-- Tipo de movimiento -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idMovementType', 'Idmovementtype:') !!}
+    {!! Form::label('idMovementType', 'Tipo de movimiento:') !!}
     {!! Form::number('idMovementType', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Iduserreceives Field -->
+<!-- Usuario recibe -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idUserReceives', 'Iduserreceives:') !!}
+    {!! Form::label('idUserReceives', 'Usuario receptor:') !!}
     {!! Form::number('idUserReceives', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idusersends Field -->
+<!-- Usuario emisor -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idUserSends', 'Idusersends:') !!}
+    {!! Form::label('idUserSends', 'Usuario emisor:') !!}
     {!! Form::number('idUserSends', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idbranchreceives Field -->
+<!-- Sucursal receptora -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idBranchReceives', 'Idbranchreceives:') !!}
+    {!! Form::label('idBranchReceives', 'Sucursal receptora:') !!}
     {!! Form::number('idBranchReceives', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idbranchsends Field -->
+<!-- Sucursal emisora -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idBranchSends', 'Idbranchsends:') !!}
+    {!! Form::label('idBranchSends', 'Sucursal emisora:') !!}
     {!! Form::number('idBranchSends', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idtransport Field -->
+<!-- Transporte -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idTransport', 'Idtransport:') !!}
+    {!! Form::label('idTransport', 'Transporte:') !!}
     {!! Form::number('idTransport', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Submit Field -->
+<!-- Guardar -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('transferMs.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('transferMs.index') !!}" class="btn btn-default">Cancelar</a>
 </div>

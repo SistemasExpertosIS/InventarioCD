@@ -1,35 +1,35 @@
-<!-- Name Field -->
+<!-- Nombre -->
 <div class="form-group col-sm-6">
-    {!! Form::label('Name', 'Name:') !!}
+    {!! Form::label('Name', 'Nombre:') !!}
     {!! Form::text('Name', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Email Field -->
+<!-- Correo electrónico -->
 <div class="form-group col-sm-6">
-    {!! Form::label('email', 'Email:') !!}
+    {!! Form::label('email', 'Correo electrónico:') !!}
     {!! Form::email('email', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Password Field -->
+<!-- Contraseña -->
 <div class="form-group col-sm-6">
-    {!! Form::label('password', 'Password:') !!}
+    {!! Form::label('password', 'Contraseña:') !!}
     {!! Form::password('password', ['class' => 'form-control']) !!}
 </div>
 
-<!-- State Field -->
+<!-- Estado -->
 <div class="form-group col-sm-6">
-    {!! Form::label('State', 'State:') !!}
+    {!! Form::label('State', 'Estado:') !!}
     {!! Form::text('State', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Rol Field -->
+<!-- Rol -->
 <div class="form-group col-sm-6">
     {!! Form::label('Rol', 'Rol:') !!}
     {!! Form::text('Rol', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Submit Field -->
+<!-- Guardar -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('users.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('users.index') !!}" class="btn btn-default">Cancelar</a>
 </div>

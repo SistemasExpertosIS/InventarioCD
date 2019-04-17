@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Movement Type
+            Tipo de movimiento
         </h1>
     </section>
     <div class="content">

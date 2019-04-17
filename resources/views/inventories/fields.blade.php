@@ -1,29 +1,29 @@
-<!-- Quantity Field -->
+<!-- Cantidad -->
 <div class="form-group col-sm-6">
-    {!! Form::label('Quantity', 'Quantity:') !!}
+    {!! Form::label('Quantity', 'Cantidad:') !!}
     {!! Form::number('Quantity', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idbranch Field -->
+<!-- Sucursal -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idBranch', 'Idbranch:') !!}
+    {!! Form::label('idBranch', 'Sucursal:') !!}
     {!! Form::number('idBranch', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idproduct Field -->
+<!-- Producto -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idProduct', 'Idproduct:') !!}
+    {!! Form::label('idProduct', 'Producto:') !!}
     {!! Form::number('idProduct', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idmovementtype Field -->
+<!-- Tipo de movimiento -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idMovementtype', 'Idmovementtype:') !!}
+    {!! Form::label('idMovementtype', 'Tipo de movimiento:') !!}
     {!! Form::number('idMovementtype', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Submit Field -->
+<!-- Guardar -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('inventories.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('inventories.index') !!}" class="btn btn-default">Cancelar</a>
 </div>

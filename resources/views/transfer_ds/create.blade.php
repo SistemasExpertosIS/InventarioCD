@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Transfer D
+            Traslado detalle
         </h1>
     </section>
     <div class="content">

@@ -1,66 +1,48 @@
-<!-- Id Field -->
+<!-- Id -->
 <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
     <p>{!! $transferM->id !!}</p>
 </div>
 
-<!-- Description Field -->
+<!-- Descripción -->
 <div class="form-group">
-    {!! Form::label('Description', 'Description:') !!}
+    {!! Form::label('Description', 'Descripción:') !!}
     <p>{!! $transferM->Description !!}</p>
 </div>
 
-<!-- Idmovementtype Field -->
+<!-- Tipo de movimiento -->
 <div class="form-group">
-    {!! Form::label('idMovementType', 'Idmovementtype:') !!}
+    {!! Form::label('idMovementType', 'Tipo de movimiento:') !!}
     <p>{!! $transferM->idMovementType !!}</p>
 </div>
 
-<!-- Iduserreceives Field -->
+<!-- Usuario receptor -->
 <div class="form-group">
-    {!! Form::label('idUserReceives', 'Iduserreceives:') !!}
+    {!! Form::label('idUserReceives', 'Usuario receptor:') !!}
     <p>{!! $transferM->idUserReceives !!}</p>
 </div>
 
-<!-- Idusersends Field -->
+<!-- Usuario emisor -->
 <div class="form-group">
-    {!! Form::label('idUserSends', 'Idusersends:') !!}
+    {!! Form::label('idUserSends', 'Usuario emisor:') !!}
     <p>{!! $transferM->idUserSends !!}</p>
 </div>
 
-<!-- Idbranchreceives Field -->
+<!-- Sucursal receptora -->
 <div class="form-group">
-    {!! Form::label('idBranchReceives', 'Idbranchreceives:') !!}
+    {!! Form::label('idBranchReceives', 'Sucursal receptora:') !!}
     <p>{!! $transferM->idBranchReceives !!}</p>
 </div>
 
-<!-- Idbranchsends Field -->
+<!-- Sucursal emisora -->
 <div class="form-group">
-    {!! Form::label('idBranchSends', 'Idbranchsends:') !!}
+    {!! Form::label('idBranchSends', 'Sucursal emisora:') !!}
     <p>{!! $transferM->idBranchSends !!}</p>
 </div>
 
-<!-- Idtransport Field -->
+<!-- Transporte -->
 <div class="form-group">
-    {!! Form::label('idTransport', 'Idtransport:') !!}
+    {!! Form::label('idTransport', 'Transporte:') !!}
     <p>{!! $transferM->idTransport !!}</p>
-</div>
-
-<!-- Created At Field -->
-<div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $transferM->created_at !!}</p>
-</div>
-
-<!-- Updated At Field -->
-<div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{!! $transferM->updated_at !!}</p>
-</div>
-
-<!-- Deleted At Field -->
-<div class="form-group">
-    {!! Form::label('deleted_at', 'Deleted At:') !!}
-    <p>{!! $transferM->deleted_at !!}</p>
 </div>
 

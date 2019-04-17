@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Movement Type
+            Tipo de movimiento
         </h1>
     </section>
     <div class="content">
@@ -11,7 +11,7 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                     @include('movement_types.show_fields')
-                    <a href="{!! route('movementTypes.index') !!}" class="btn btn-default">Back</a>
+                    <a href="{!! route('movementTypes.index') !!}" class="btn btn-default">Regresar</a>
                 </div>
             </div>
         </div>

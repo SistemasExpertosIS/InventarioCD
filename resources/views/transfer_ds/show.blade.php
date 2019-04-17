@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Transfer D
+            Traslado detalle
         </h1>
     </section>
     <div class="content">
@@ -11,7 +11,7 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                     @include('transfer_ds.show_fields')
-                    <a href="{!! route('transferDs.index') !!}" class="btn btn-default">Back</a>
+                    <a href="{!! route('transferDs.index') !!}" class="btn btn-default">Regresar</a>
                 </div>
             </div>
         </div>

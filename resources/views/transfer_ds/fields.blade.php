@@ -1,35 +1,35 @@
-<!-- Quantity Field -->
+<!-- Cantidad -->
 <div class="form-group col-sm-6">
-    {!! Form::label('Quantity', 'Quantity:') !!}
+    {!! Form::label('Quantity', 'Cantidad:') !!}
     {!! Form::text('Quantity', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- State Field -->
+<!-- Estado -->
 <div class="form-group col-sm-6">
-    {!! Form::label('State', 'State:') !!}
+    {!! Form::label('State', 'Estado:') !!}
     {!! Form::text('State', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idtransferm Field -->
+<!-- Traslado -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idTransferM', 'Idtransferm:') !!}
+    {!! Form::label('idTransferM', 'Traslado:') !!}
     {!! Form::number('idTransferM', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idbox Field -->
+<!-- Caja -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idBox', 'Idbox:') !!}
+    {!! Form::label('idBox', 'Caja:') !!}
     {!! Form::number('idBox', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Idproduct Field -->
+<!-- Producto -->
 <div class="form-group col-sm-6">
-    {!! Form::label('idProduct', 'Idproduct:') !!}
+    {!! Form::label('idProduct', 'Producto:') !!}
     {!! Form::number('idProduct', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Submit Field -->
+<!-- Guardar -->
 <div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('transferDs.index') !!}" class="btn btn-default">Cancel</a>
+    {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('transferDs.index') !!}" class="btn btn-default">Cancelar</a>
 </div>

@@ -1,30 +1,24 @@
-<!-- Id Field -->
+<!-- Id -->
 <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
     <p>{!! $user->id !!}</p>
 </div>
 
-<!-- Name Field -->
+<!-- Nombre -->
 <div class="form-group">
-    {!! Form::label('Name', 'Name:') !!}
+    {!! Form::label('Name', 'Nombre:') !!}
     <p>{!! $user->Name !!}</p>
 </div>
 
-<!-- Email Field -->
+<!-- Correo electrónico -->
 <div class="form-group">
-    {!! Form::label('email', 'Email:') !!}
+    {!! Form::label('email', 'Correo electrónico:') !!}
     <p>{!! $user->email !!}</p>
 </div>
 
-<!-- Password Field -->
+<!-- Estado -->
 <div class="form-group">
-    {!! Form::label('password', 'Password:') !!}
-    <p>{!! $user->password !!}</p>
-</div>
-
-<!-- State Field -->
-<div class="form-group">
-    {!! Form::label('State', 'State:') !!}
+    {!! Form::label('State', 'Estado:') !!}
     <p>{!! $user->State !!}</p>
 </div>
 
@@ -34,9 +28,4 @@
     <p>{!! $user->Rol !!}</p>
 </div>
 
-<!-- Deleted At Field -->
-<div class="form-group">
-    {!! Form::label('deleted_at', 'Deleted At:') !!}
-    <p>{!! $user->deleted_at !!}</p>
-</div>
 

@@ -1,42 +1,41 @@
-<!-- Id Field -->
+<!-- Id -->
 <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
     <p>{!! $transport->id !!}</p>
 </div>
 
-<!-- Plate Field -->
+<!-- Placa -->
 <div class="form-group">
-    {!! Form::label('Plate', 'Plate:') !!}
+    {!! Form::label('Plate', 'Placa:') !!}
     <p>{!! $transport->Plate !!}</p>
 </div>
 
-<!-- Drivername Field -->
+<!-- Conductor -->
 <div class="form-group">
-    {!! Form::label('Drivername', 'Drivername:') !!}
+    {!! Form::label('Drivername', 'Nombre del Conductor:') !!}
     <p>{!! $transport->Drivername !!}</p>
 </div>
 
-<!-- Driveridentity Field -->
+<!-- Conductor ID -->
 <div class="form-group">
-    {!! Form::label('DriverIdentity', 'Driveridentity:') !!}
+    {!! Form::label('DriverIdentity', 'ID del Conductor:') !!}
     <p>{!! $transport->DriverIdentity !!}</p>
 </div>
 
-<!-- Created At Field -->
+<!-- 
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}
     <p>{!! $transport->created_at !!}</p>
 </div>
 
-<!-- Deleted At Field -->
 <div class="form-group">
     {!! Form::label('deleted_at', 'Deleted At:') !!}
     <p>{!! $transport->deleted_at !!}</p>
 </div>
 
-<!-- Updated At Field -->
+
 <div class="form-group">
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{!! $transport->updated_at !!}</p>
-</div>
+</div> -->
 

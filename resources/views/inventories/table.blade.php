@@ -1,11 +1,11 @@
 <table class="table table-responsive" id="inventories-table">
     <thead>
         <tr>
-            <th>Quantity</th>
-        <th>Idbranch</th>
-        <th>Idproduct</th>
-        <th>Idmovementtype</th>
-            <th colspan="3">Action</th>
+        <th>Cantidad</th>
+        <th>Sucursal</th>
+        <th>Producto</th>
+        <th>Tipo de movimiento</th>
+        <th colspan="3">Acción</th>
         </tr>
     </thead>
     <tbody>

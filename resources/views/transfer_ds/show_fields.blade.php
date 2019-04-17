@@ -1,54 +1,38 @@
-<!-- Id Field -->
+<!-- Id -->
 <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
     <p>{!! $transferD->id !!}</p>
 </div>
 
-<!-- Quantity Field -->
+<!-- Cantidad -->
 <div class="form-group">
-    {!! Form::label('Quantity', 'Quantity:') !!}
+    {!! Form::label('Quantity', 'Cantidad:') !!}
     <p>{!! $transferD->Quantity !!}</p>
 </div>
 
-<!-- State Field -->
+<!-- Estado -->
 <div class="form-group">
-    {!! Form::label('State', 'State:') !!}
+    {!! Form::label('State', 'Estado:') !!}
     <p>{!! $transferD->State !!}</p>
 </div>
 
-<!-- Idtransferm Field -->
+<!-- Traslado -->
 <div class="form-group">
-    {!! Form::label('idTransferM', 'Idtransferm:') !!}
+    {!! Form::label('idTransferM', 'Traslado:') !!}
     <p>{!! $transferD->idTransferM !!}</p>
 </div>
 
-<!-- Idbox Field -->
+<!-- Caja -->
 <div class="form-group">
-    {!! Form::label('idBox', 'Idbox:') !!}
+    {!! Form::label('idBox', 'Caja:') !!}
     <p>{!! $transferD->idBox !!}</p>
 </div>
 
-<!-- Idproduct Field -->
+<!-- Producto -->
 <div class="form-group">
-    {!! Form::label('idProduct', 'Idproduct:') !!}
+    {!! Form::label('idProduct', 'Producto:') !!}
     <p>{!! $transferD->idProduct !!}</p>
 </div>
 
-<!-- Created At Field -->
-<div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $transferD->created_at !!}</p>
-</div>
 
-<!-- Deleted At Field -->
-<div class="form-group">
-    {!! Form::label('deleted_at', 'Deleted At:') !!}
-    <p>{!! $transferD->deleted_at !!}</p>
-</div>
-
-<!-- Updated At Field -->
-<div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{!! $transferD->updated_at !!}</p>
-</div>
 

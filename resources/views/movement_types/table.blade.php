@@ -1,10 +1,10 @@
 <table class="table table-responsive" id="movementTypes-table">
     <thead>
         <tr>
-            <th>Name</th>
-        <th>Abv</th>
-        <th>Entry</th>
-            <th colspan="3">Action</th>
+        <th>Nombre</th>
+        <th>Abreviatura</th>
+        <th>Entrada</th>
+        <th colspan="3">Acción</th>
         </tr>
     </thead>
     <tbody>
