@@ -11,7 +11,7 @@
 </li>
 
 <li class="{{ Request::is('transports*') ? 'active' : '' }}">
-    <a href="{!! route('transports.index') !!}"><i class="fa fa-truck" aria-hidden="true"></i><span>Traslados</span></a>
+    <a href="{!! route('transports.index') !!}"><i class="fa fa-truck" aria-hidden="true"></i><span>Transportes</span></a>
 </li>
 <li class="{{ Request::is('movementTypes*') ? 'active' : '' }}">
     <a href="{!! route('movementTypes.index') !!}"><i class="fa fa-edit"></i><span>Tipo Movimientos</span></a>
