@@ -33,7 +33,13 @@ class UserController extends AppBaseController
     {
         $this->userRepository->pushCriteria(new RequestCriteria($request));
         $users = $this->userRepository->all();
-
+        foreach ($users as $user) {
+            if($user->State == 1){
+                $user->State = "Activo";
+            }else {
+                $user->State = "Inactivo";
+            }
+        }
         return view('users.index')
             ->with('users', $users);
     }
@@ -87,6 +93,11 @@ class UserController extends AppBaseController
             Flash::error('User not found');
 
             return redirect(route('users.index'));
+        }
+        if($user->State == 1){
+            $user->State = "Activo";
+        }else {
+            $user->State = "Inactivo";
         }
 
         return view('users.show')->with('user', $user);

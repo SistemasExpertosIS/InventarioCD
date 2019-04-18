@@ -33,6 +33,14 @@ class TransferDController extends AppBaseController
         $this->transferDRepository->pushCriteria(new RequestCriteria($request));
         $transferDs = $this->transferDRepository->all();
 
+        foreach ($transferDs as $transferD) {
+            if($transferD->State == 1){
+                $transferD->State = "Activo";
+            }else {
+                $transferD->State = "Inactivo";
+            }
+        }
+
         return view('transfer_ds.index')
             ->with('transferDs', $transferDs);
     }
@@ -80,6 +88,11 @@ class TransferDController extends AppBaseController
             Flash::error('Transfer D not found');
 
             return redirect(route('transferDs.index'));
+        }
+        if($transferD->State == 1){
+            $transferD->State = "Activo";
+        }else {
+            $transferD->State = "Inactivo";
         }
 
         return view('transfer_ds.show')->with('transferD', $transferD);

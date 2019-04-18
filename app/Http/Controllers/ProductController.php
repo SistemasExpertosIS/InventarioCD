@@ -32,6 +32,13 @@ class ProductController extends AppBaseController
     {
         $this->productRepository->pushCriteria(new RequestCriteria($request));
         $products = $this->productRepository->all();
+        foreach ($products as $product) {
+            if($product->State == 1){
+                $product->State = "Activo";
+            }else {
+                $product->State = "Inactivo";
+            }
+        }
 
         return view('products.index')
             ->with('products', $products);
@@ -80,6 +87,11 @@ class ProductController extends AppBaseController
             Flash::error('Product not found');
 
             return redirect(route('products.index'));
+        }
+        if($product->State == 1){
+            $product->State = "Activo";
+        }else {
+            $product->State = "Inactivo";
         }
 
         return view('products.show')->with('product', $product);

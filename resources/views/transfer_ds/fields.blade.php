@@ -7,7 +7,7 @@
 <!-- Estado -->
 <div class="form-group col-sm-6">
     {!! Form::label('State', 'Estado:') !!}
-    {!! Form::text('State', null, ['class' => 'form-control']) !!}
+    {!! Form::select('State', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Traslado -->
