@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateUsersTable extends Migration
+class CreatebranchesTable extends Migration
 {
 
     /**
@@ -13,8 +13,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('branch', function (Blueprint $table) {
+            $table->integer('id', true);
+            $table->string('Name');
+            $table->string('City');
+            $table->string('Abv');
+            $table->integer('idUser', false);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -27,6 +31,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
+        Schema::drop('branches');
     }
 }
