@@ -37,3 +37,7 @@ Route::resource('transferMs', 'TransferMController');
 Route::resource('transferDs', 'TransferDController');
 
 Route::resource('inventories', 'InventoryController');
+
+Route::get('/unauthorized', function () {
+    return view('errors.403');
+});

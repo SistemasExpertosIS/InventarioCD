@@ -8,3 +8,15 @@
 .footer-borrar {
     background-color: #b32222d1;
 }
+.contenedor {
+    padding-top: 7%;
+    color: white;
+}
+.no-encontrada {
+    padding-top: 1%;
+}
+.link-ne {
+    color: white;
+    font-size: 173%;
+    margin: 1%;
+}
