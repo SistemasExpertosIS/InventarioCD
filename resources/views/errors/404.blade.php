@@ -14,7 +14,7 @@
         <div class="no-encontrada">
             <h1>Página no encontrada</h1>
             <br>
-            <h2> <a href="/" style="color: white;"> Ir al Inicio </a></h2>
+            <a class="link-ne" href="/"><i class="fa fa-home"></i> Ir al Inicio</a>
         </div>
     </div>
 @endsection
