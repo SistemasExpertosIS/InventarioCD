@@ -73,7 +73,7 @@ class UserController extends AppBaseController
             'Rol' => $request['Rol']
         ]);
 
-        Flash::success('User saved successfully.');
+        Flash::success('Usuario guardado exitosamente.');
 
         return redirect(route('users.index'));
     }
@@ -90,7 +90,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado.');
 
             return redirect(route('users.index'));
         }
@@ -115,7 +115,7 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado.');
 
             return redirect(route('users.index'));
         }
@@ -136,14 +136,14 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado.');
 
             return redirect(route('users.index'));
         }
 
         $user = $this->userRepository->update($request->all(), $id);
 
-        Flash::success('User updated successfully.');
+        Flash::success('Usuario actualizado exitosamente.');
 
         return redirect(route('users.index'));
     }*/
@@ -160,14 +160,14 @@ class UserController extends AppBaseController
         $user = $this->userRepository->findWithoutFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
+            Flash::error('Usuario no encontrado.');
 
             return redirect(route('users.index'));
         }
 
         $this->userRepository->delete($id);
 
-        Flash::success('User deleted successfully.');
+        Flash::success('Usuario eliminado exitosamente.');
 
         return redirect(route('users.index'));
     }

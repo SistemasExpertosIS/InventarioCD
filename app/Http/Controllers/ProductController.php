@@ -67,7 +67,7 @@ class ProductController extends AppBaseController
 
         $product = $this->productRepository->create($input);
 
-        Flash::success('Product saved successfully.');
+        Flash::success('Producto guardado exitosamente.');
 
         return redirect(route('products.index'));
     }
@@ -84,7 +84,7 @@ class ProductController extends AppBaseController
         $product = $this->productRepository->findWithoutFail($id);
 
         if (empty($product)) {
-            Flash::error('Product not found');
+            Flash::error('Producto no encontrado.');
 
             return redirect(route('products.index'));
         }
@@ -109,7 +109,7 @@ class ProductController extends AppBaseController
         $product = $this->productRepository->findWithoutFail($id);
 
         if (empty($product)) {
-            Flash::error('Product not found');
+            Flash::error('Producto no encontrado.');
 
             return redirect(route('products.index'));
         }
@@ -130,14 +130,14 @@ class ProductController extends AppBaseController
         $product = $this->productRepository->findWithoutFail($id);
 
         if (empty($product)) {
-            Flash::error('Product not found');
+            Flash::error('Producto no encontrado.');
 
             return redirect(route('products.index'));
         }
 
         $product = $this->productRepository->update($request->all(), $id);
 
-        Flash::success('Product updated successfully.');
+        Flash::success('Producto actualizado exitosamente.');
 
         return redirect(route('products.index'));
     }
@@ -154,14 +154,14 @@ class ProductController extends AppBaseController
         $product = $this->productRepository->findWithoutFail($id);
 
         if (empty($product)) {
-            Flash::error('Product not found');
+            Flash::error('Producto no encontrado.');
 
             return redirect(route('products.index'));
         }
 
         $this->productRepository->delete($id);
 
-        Flash::success('Product deleted successfully.');
+        Flash::success('Producto eliminado exitosamente.');
 
         return redirect(route('products.index'));
     }

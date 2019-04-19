@@ -60,7 +60,7 @@ class BoxController extends AppBaseController
 
         $box = $this->boxRepository->create($input);
 
-        Flash::success('Box saved successfully.');
+        Flash::success('Caja guardada exitosamente');
 
         return redirect(route('boxes.index'));
     }
@@ -77,7 +77,7 @@ class BoxController extends AppBaseController
         $box = $this->boxRepository->findWithoutFail($id);
 
         if (empty($box)) {
-            Flash::error('Box not found');
+            Flash::error('Caja no encontrada.');
 
             return redirect(route('boxes.index'));
         }
@@ -97,7 +97,7 @@ class BoxController extends AppBaseController
         $box = $this->boxRepository->findWithoutFail($id);
 
         if (empty($box)) {
-            Flash::error('Box not found');
+            Flash::error('Caja no encontrada.');
 
             return redirect(route('boxes.index'));
         }
@@ -118,14 +118,14 @@ class BoxController extends AppBaseController
         $box = $this->boxRepository->findWithoutFail($id);
 
         if (empty($box)) {
-            Flash::error('Box not found');
+            Flash::error('Caja no encontrada.');
 
             return redirect(route('boxes.index'));
         }
 
         $box = $this->boxRepository->update($request->all(), $id);
 
-        Flash::success('Box updated successfully.');
+        Flash::success('Caja actualizada exitosamente.');
 
         return redirect(route('boxes.index'));
     }
@@ -142,14 +142,14 @@ class BoxController extends AppBaseController
         $box = $this->boxRepository->findWithoutFail($id);
 
         if (empty($box)) {
-            Flash::error('Box not found');
+            Flash::error('Caja no encontrada.');
 
             return redirect(route('boxes.index'));
         }
 
         $this->boxRepository->delete($id);
 
-        Flash::success('Box deleted successfully.');
+        Flash::success('Caja eliminada exitosamente.');
 
         return redirect(route('boxes.index'));
     }
