@@ -13,36 +13,36 @@
 <!-- Tipo de movimiento -->
 <div class="form-group">
     {!! Form::label('idMovementType', 'Tipo de movimiento:') !!}
-    <p>{!! $transferM->idMovementType !!}</p>
+    <p>{!! $tipoMovimiento->Name !!}</p>
 </div>
 
 <!-- Usuario receptor -->
 <div class="form-group">
     {!! Form::label('idUserReceives', 'Usuario receptor:') !!}
-    <p>{!! $transferM->idUserReceives !!}</p>
+    <p>{!! $usuarioReceptor->Name !!}</p>
 </div>
 
 <!-- Usuario emisor -->
 <div class="form-group">
     {!! Form::label('idUserSends', 'Usuario emisor:') !!}
-    <p>{!! $transferM->idUserSends !!}</p>
+    <p>{!! $usuarioEmisor->Name !!}</p>
 </div>
 
 <!-- Sucursal receptora -->
 <div class="form-group">
     {!! Form::label('idBranchReceives', 'Sucursal receptora:') !!}
-    <p>{!! $transferM->idBranchReceives !!}</p>
+    <p>{!! $sucursalReceptora->Name !!}</p>
 </div>
 
 <!-- Sucursal emisora -->
 <div class="form-group">
     {!! Form::label('idBranchSends', 'Sucursal emisora:') !!}
-    <p>{!! $transferM->idBranchSends !!}</p>
+    <p>{!! $sucursalEmisora->Name !!}</p>
 </div>
 
 <!-- Transporte -->
 <div class="form-group">
     {!! Form::label('idTransport', 'Transporte:') !!}
-    <p>{!! $transferM->idTransport !!}</p>
+    <p>{!! $transporte->Plate !!}</p>
 </div>
 

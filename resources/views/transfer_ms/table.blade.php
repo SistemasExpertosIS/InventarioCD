@@ -15,12 +15,12 @@
     @foreach($transferMs as $transferM)
         <tr>
             <td>{!! $transferM->Description !!}</td>
-            <td>{!! $transferM->idMovementType !!}</td>
-            <td>{!! $transferM->idUserReceives !!}</td>
-            <td>{!! $transferM->idUserSends !!}</td>
-            <td>{!! $transferM->idBranchReceives !!}</td>
-            <td>{!! $transferM->idBranchSends !!}</td>
-            <td>{!! $transferM->idTransport !!}</td>
+            <td>{!! $transferM->TipoMovimiento !!}</td>
+            <td>{!! $transferM->UsuarioReceptor !!}</td>
+            <td>{!! $transferM->UsuarioEmisor !!}</td>
+            <td>{!! $transferM->SucursalReceptora !!}</td>
+            <td>{!! $transferM->SucursalEmisora !!}</td>
+            <td>{!! $transferM->Placa !!}</td>
             <td>                
                 <div class='btn-group'>
                     <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>

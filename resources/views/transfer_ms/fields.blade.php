@@ -7,37 +7,37 @@
 <!-- Tipo de movimiento -->
 <div class="form-group col-sm-6">
     {!! Form::label('idMovementType', 'Tipo de movimiento:') !!}
-    {!! Form::number('idMovementType', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idMovementType', $tipoMovimiento, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Usuario recibe -->
 <div class="form-group col-sm-6">
     {!! Form::label('idUserReceives', 'Usuario receptor:') !!}
-    {!! Form::number('idUserReceives', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idUserReceives', $usuarios, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Usuario emisor -->
 <div class="form-group col-sm-6">
     {!! Form::label('idUserSends', 'Usuario emisor:') !!}
-    {!! Form::number('idUserSends', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idUserSends', $usuarios, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Sucursal receptora -->
 <div class="form-group col-sm-6">
     {!! Form::label('idBranchReceives', 'Sucursal receptora:') !!}
-    {!! Form::number('idBranchReceives', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idBranchReceives', $sucursales, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Sucursal emisora -->
 <div class="form-group col-sm-6">
     {!! Form::label('idBranchSends', 'Sucursal emisora:') !!}
-    {!! Form::number('idBranchSends', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idBranchSends', $sucursales, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Transporte -->
 <div class="form-group col-sm-6">
     {!! Form::label('idTransport', 'Transporte:') !!}
-    {!! Form::number('idTransport', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idTransport', $transportes, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Guardar -->
