@@ -10,6 +10,9 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use App\Models\User;
+use App\Models\Branch;
+use Illuminate\Support\Facades\DB;
 
 class BranchController extends AppBaseController
 {
@@ -30,11 +33,15 @@ class BranchController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $this->branchRepository->pushCriteria(new RequestCriteria($request));
-        $branches = $this->branchRepository->all();
+        /*Hace un Join entre las tablas branch y users para obtener el nombre del usuario
+        asignado a cada sucursal y poder mostrarlo, en lugar de mostrar solamente el idUser
+        que se guarda en la tabla branch*/
+        $branches = DB::table('users as us')
+        ->select('b.id', 'b.Name', 'b.City', 'b.Abv', 'us.name as Usuario')
+        ->whereNull('b.deleted_at')
+        ->join('branch as b','us.Id','=','b.idUser')->get();
+        return view('branches.index', compact('branches'));//Retorna la info a la vista
 
-        return view('branches.index')
-            ->with('branches', $branches);
     }
 
     /**
@@ -44,7 +51,11 @@ class BranchController extends AppBaseController
      */
     public function create()
     {
-        return view('branches.create');
+        /*Obtiene todos los usuarios que estén activos y los retorna al create del branch,
+        de esta forma el cliente puede ver el nombre del usuario que está asignando a cada branch,
+        en lugar de tener que ingresar manualmente el id de dicho usuario*/
+        $usuarios = User::where('State', 1)->pluck('name','id');
+        return view('branches.create')->with('usuarios', $usuarios);
     }
 
     /**
@@ -81,8 +92,11 @@ class BranchController extends AppBaseController
 
             return redirect(route('branches.index'));
         }
-
-        return view('branches.show')->with('branch', $branch);
+        /*Obtiene el usuario que está asignado a esa determinada sucursal y lo retorna
+        a la vista show para que el cliente pueda ver el nombre del usuario asignado a esa
+        sucursal, en vez de mirar solamente su id*/
+        $usuario = $branch->iduser()->get()[0];
+        return view('branches.show', compact('branch', 'usuario'));
     }
 
     /**
@@ -101,8 +115,9 @@ class BranchController extends AppBaseController
 
             return redirect(route('branches.index'));
         }
-
-        return view('branches.edit')->with('branch', $branch);
+        //Misma lógica del create
+        $usuarios = User::where('State', 1)->pluck('name','id');
+        return view('branches.edit', compact('usuarios', 'branch'));
     }
 
     /**

@@ -14,7 +14,8 @@
             <td>{!! $branch->Name !!}</td>
             <td>{!! $branch->City !!}</td>
             <td>{!! $branch->Abv !!}</td>
-            <td>{!! $branch->idUser !!}</td>
+            <!--Se muestra el usuario en vez del id-->
+            <td>{!! $branch->Usuario !!}</td>
             <td>
                 <div class='btn-group'>
                     <a href="{!! route('branches.show', [$branch->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>

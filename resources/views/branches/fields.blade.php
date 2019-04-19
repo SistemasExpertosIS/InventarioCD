@@ -19,7 +19,8 @@
 <!-- Usuario -->
 <div class="form-group col-sm-6">
     {!! Form::label('idUser', 'Usuario:') !!}
-    {!! Form::number('idUser', null, ['class' => 'form-control']) !!}
+    <!--Se muestra el combobox con los usuarios disponibles para agregar-->
+    {!! Form::select('idUser', $usuarios, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Guardar -->

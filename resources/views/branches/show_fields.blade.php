@@ -24,8 +24,9 @@
 
 <!-- Usuario -->
 <div class="form-group">
-    {!! Form::label('idUser', 'Usuario:') !!}
-    <p>{!! $branch->idUser !!}</p>
+    {!! Form::label('Name', 'Usuario:') !!}
+    <!--Se muestra el nombre del usuario que nos devuelve el controlador-->
+    <p>{!! $usuario->Name !!}</p>
 </div>
 
 <!-- Created
