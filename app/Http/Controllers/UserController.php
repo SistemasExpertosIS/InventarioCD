@@ -110,7 +110,7 @@ class UserController extends AppBaseController
      *
      * @return Response
      */
-    /*public function edit($id)
+    public function edit($id)
     {
         $user = $this->userRepository->findWithoutFail($id);
 
@@ -121,7 +121,7 @@ class UserController extends AppBaseController
         }
 
         return view('users.edit')->with('user', $user);
-    }*/
+    }
 
     /**
      * Update the specified User in storage.
@@ -131,7 +131,7 @@ class UserController extends AppBaseController
      *
      * @return Response
      */
-    /*public function update($id, UpdateUserRequest $request)
+    public function update($id, UpdateUserRequest $request)
     {
         $user = $this->userRepository->findWithoutFail($id);
 
@@ -146,7 +146,7 @@ class UserController extends AppBaseController
         Flash::success('Usuario actualizado exitosamente.');
 
         return redirect(route('users.index'));
-    }*/
+    }
 
     /**
      * Remove the specified User from storage.

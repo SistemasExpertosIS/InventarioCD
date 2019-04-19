@@ -14,7 +14,7 @@
                 <div class="row">
                     {!! Form::open(['route' => 'users.store']) !!}
 
-                        @include('users.fields')
+                        @include('users.fields', ['disabled' => false])
 
                     {!! Form::close() !!}
                 </div>
