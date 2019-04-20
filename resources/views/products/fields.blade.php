@@ -1,19 +1,19 @@
 <!-- Nombre -->
 <div class="form-group col-sm-6">
     {!! Form::label('Name', 'Nombre:') !!}
-    {!! Form::text('Name', null, ['class' => 'form-control']) !!}
+    {!! Form::text('Name', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Código -->
 <div class="form-group col-sm-6">
     {!! Form::label('Code', 'Código:') !!}
-    {!! Form::text('Code', null, ['class' => 'form-control']) !!}
+    {!! Form::text('Code', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Descripción -->
 <div class="form-group col-sm-6">
     {!! Form::label('Description', 'Descripción:') !!}
-    {!! Form::text('Description', null, ['class' => 'form-control']) !!}
+    {!! Form::text('Description', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Estado -->

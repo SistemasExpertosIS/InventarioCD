@@ -1,19 +1,19 @@
 <!-- Nombre -->
 <div class="form-group col-sm-6">
     {!! Form::label('Name', 'Nombre:') !!}
-    {!! Form::text('Name', null, ['class' => 'form-control']) !!}
+    {!! Form::text('Name', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Abreviatura -->
 <div class="form-group col-sm-6">
     {!! Form::label('Abv', 'Abreviatura:') !!}
-    {!! Form::text('Abv', null, ['class' => 'form-control']) !!}
+    {!! Form::text('Abv', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Entrada -->
 <div class="form-group col-sm-6">
     {!! Form::label('Entry', 'Entrada:') !!}
-    {!! Form::text('Entry', null, ['class' => 'form-control']) !!}
+    {!! Form::text('Entry', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Guardar -->

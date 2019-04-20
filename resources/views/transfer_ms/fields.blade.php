@@ -1,7 +1,7 @@
 <!-- Descripción-->
 <div class="form-group col-sm-6">
     {!! Form::label('Description', 'Descripción:') !!}
-    {!! Form::text('Description', null, ['class' => 'form-control']) !!}
+    {!! Form::text('Description', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Tipo de movimiento -->

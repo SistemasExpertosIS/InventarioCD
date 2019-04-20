@@ -1,19 +1,19 @@
 <!-- Placa -->
 <div class="form-group col-sm-6">
     {!! Form::label('Plate', 'Placa:') !!}
-    {!! Form::text('Plate', null, ['class' => 'form-control']) !!}
+    {!! Form::text('Plate', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Conductor -->
 <div class="form-group col-sm-6">
     {!! Form::label('Drivername', 'Nombre del Conductor:') !!}
-    {!! Form::text('Drivername', null, ['class' => 'form-control']) !!}
+    {!! Form::text('Drivername', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Conductor ID -->
 <div class="form-group col-sm-6">
     {!! Form::label('DriverIdentity', 'ID del Conductor:') !!}
-    {!! Form::text('DriverIdentity', null, ['class' => 'form-control']) !!}
+    {!! Form::text('DriverIdentity', null, ['class' => 'form-control', 'required']) !!}
 </div>
 
 <!-- Guardar -->
