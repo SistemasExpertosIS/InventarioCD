@@ -60,7 +60,7 @@ class TransportController extends AppBaseController
 
         $transport = $this->transportRepository->create($input);
 
-        Flash::success('Transport saved successfully.');
+        Flash::success('Trasnporte guardado exitosamente.');
 
         return redirect(route('transports.index'));
     }
@@ -77,7 +77,7 @@ class TransportController extends AppBaseController
         $transport = $this->transportRepository->findWithoutFail($id);
 
         if (empty($transport)) {
-            Flash::error('Transport not found');
+            Flash::error('Trasnporte no encontrado.');
 
             return redirect(route('transports.index'));
         }
@@ -97,7 +97,7 @@ class TransportController extends AppBaseController
         $transport = $this->transportRepository->findWithoutFail($id);
 
         if (empty($transport)) {
-            Flash::error('Transport not found');
+            Flash::error('Trasnporte no encontrado.');
 
             return redirect(route('transports.index'));
         }
@@ -118,14 +118,14 @@ class TransportController extends AppBaseController
         $transport = $this->transportRepository->findWithoutFail($id);
 
         if (empty($transport)) {
-            Flash::error('Transport not found');
+            Flash::error('Trasnporte no encontrado.');
 
             return redirect(route('transports.index'));
         }
 
         $transport = $this->transportRepository->update($request->all(), $id);
 
-        Flash::success('Transport updated successfully.');
+        Flash::success('Trasnporte actualizado exitosamente.');
 
         return redirect(route('transports.index'));
     }
@@ -142,14 +142,14 @@ class TransportController extends AppBaseController
         $transport = $this->transportRepository->findWithoutFail($id);
 
         if (empty($transport)) {
-            Flash::error('Transport not found');
+            Flash::error('Trasnporte no encontrado.');
 
             return redirect(route('transports.index'));
         }
 
         $this->transportRepository->delete($id);
 
-        Flash::success('Transport deleted successfully.');
+        Flash::success('Trasnporte eliminado exitosamente.');
 
         return redirect(route('transports.index'));
     }

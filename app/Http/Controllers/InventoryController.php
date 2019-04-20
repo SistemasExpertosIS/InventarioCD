@@ -60,7 +60,7 @@ class InventoryController extends AppBaseController
 
         $inventory = $this->inventoryRepository->create($input);
 
-        Flash::success('Inventory saved successfully.');
+        Flash::success('Inventario guardado exitosamente.');
 
         return redirect(route('inventories.index'));
     }
@@ -77,7 +77,7 @@ class InventoryController extends AppBaseController
         $inventory = $this->inventoryRepository->findWithoutFail($id);
 
         if (empty($inventory)) {
-            Flash::error('Inventory not found');
+            Flash::error('Inventario no encontrado.');
 
             return redirect(route('inventories.index'));
         }
@@ -97,7 +97,7 @@ class InventoryController extends AppBaseController
         $inventory = $this->inventoryRepository->findWithoutFail($id);
 
         if (empty($inventory)) {
-            Flash::error('Inventory not found');
+            Flash::error('Inventario no encontrado.');
 
             return redirect(route('inventories.index'));
         }
@@ -118,14 +118,14 @@ class InventoryController extends AppBaseController
         $inventory = $this->inventoryRepository->findWithoutFail($id);
 
         if (empty($inventory)) {
-            Flash::error('Inventory not found');
+            Flash::error('Inventario no encontrado.');
 
             return redirect(route('inventories.index'));
         }
 
         $inventory = $this->inventoryRepository->update($request->all(), $id);
 
-        Flash::success('Inventory updated successfully.');
+        Flash::success('Inventario actualizado exitosamente.');
 
         return redirect(route('inventories.index'));
     }
@@ -142,14 +142,14 @@ class InventoryController extends AppBaseController
         $inventory = $this->inventoryRepository->findWithoutFail($id);
 
         if (empty($inventory)) {
-            Flash::error('Inventory not found');
+            Flash::error('Inventario no encontrado.');
 
             return redirect(route('inventories.index'));
         }
 
         $this->inventoryRepository->delete($id);
 
-        Flash::success('Inventory deleted successfully.');
+        Flash::success('Inventario eliminado exitosamente.');
 
         return redirect(route('inventories.index'));
     }

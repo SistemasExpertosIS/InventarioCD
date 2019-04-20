@@ -81,7 +81,7 @@ class TransferMController extends AppBaseController
 
         $transferM = $this->transferMRepository->create($input);
 
-        Flash::success('Transfer M saved successfully.');
+        Flash::success('El Traslado/Movimiento se ha guardado exitosamente.');
 
         return redirect(route('transferMs.index'));
     }
@@ -98,7 +98,7 @@ class TransferMController extends AppBaseController
         $transferM = $this->transferMRepository->findWithoutFail($id);
 
         if (empty($transferM)) {
-            Flash::error('Transfer M not found');
+            Flash::error('El Traslado/Movimiento no se ha encontrado.');
 
             return redirect(route('transferMs.index'));
         }
@@ -126,7 +126,7 @@ class TransferMController extends AppBaseController
         $transferM = $this->transferMRepository->findWithoutFail($id);
 
         if (empty($transferM)) {
-            Flash::error('Transfer M not found');
+            Flash::error('El Traslado/Movimiento no se ha encontrado.');
 
             return redirect(route('transferMs.index'));
         }
@@ -151,14 +151,14 @@ class TransferMController extends AppBaseController
         $transferM = $this->transferMRepository->findWithoutFail($id);
 
         if (empty($transferM)) {
-            Flash::error('Transfer M not found');
+            Flash::error('El Traslado/Movimiento no se ha encontrado.');
 
             return redirect(route('transferMs.index'));
         }
 
         $transferM = $this->transferMRepository->update($request->all(), $id);
 
-        Flash::success('Transfer M updated successfully.');
+        Flash::success('El Traslado/Movimiento se ha modificado exitosamente.');
 
         return redirect(route('transferMs.index'));
     }
@@ -175,14 +175,14 @@ class TransferMController extends AppBaseController
         $transferM = $this->transferMRepository->findWithoutFail($id);
 
         if (empty($transferM)) {
-            Flash::error('Transfer M not found');
+            Flash::error('El Traslado/Movimiento no se ha encontrado.');
 
             return redirect(route('transferMs.index'));
         }
 
         $this->transferMRepository->delete($id);
 
-        Flash::success('Transfer M deleted successfully.');
+        Flash::success('El Traslado/Movimiento se ha eliminado exitosamente.');
 
         return redirect(route('transferMs.index'));
     }

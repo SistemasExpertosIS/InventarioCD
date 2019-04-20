@@ -71,7 +71,7 @@ class BranchController extends AppBaseController
 
         $branch = $this->branchRepository->create($input);
 
-        Flash::success('Branch saved successfully.');
+        Flash::success('Sucursal guardada exitosamente.');
 
         return redirect(route('branches.index'));
     }
@@ -88,7 +88,7 @@ class BranchController extends AppBaseController
         $branch = $this->branchRepository->findWithoutFail($id);
 
         if (empty($branch)) {
-            Flash::error('Branch not found');
+            Flash::error('Sucursal no encontrada.');
 
             return redirect(route('branches.index'));
         }
@@ -111,7 +111,7 @@ class BranchController extends AppBaseController
         $branch = $this->branchRepository->findWithoutFail($id);
 
         if (empty($branch)) {
-            Flash::error('Branch not found');
+            Flash::error('Sucursal no encontrada.');
 
             return redirect(route('branches.index'));
         }
@@ -133,14 +133,14 @@ class BranchController extends AppBaseController
         $branch = $this->branchRepository->findWithoutFail($id);
 
         if (empty($branch)) {
-            Flash::error('Branch not found');
+            Flash::error('Sucursal no encontrada.');
 
             return redirect(route('branches.index'));
         }
 
         $branch = $this->branchRepository->update($request->all(), $id);
 
-        Flash::success('Branch updated successfully.');
+        Flash::success('Sucursal actualizada exitosamente.');
 
         return redirect(route('branches.index'));
     }
@@ -157,14 +157,14 @@ class BranchController extends AppBaseController
         $branch = $this->branchRepository->findWithoutFail($id);
 
         if (empty($branch)) {
-            Flash::error('Branch not found');
+            Flash::error('Sucursal no encontrada.');
 
             return redirect(route('branches.index'));
         }
 
         $this->branchRepository->delete($id);
 
-        Flash::success('Branch deleted successfully.');
+        Flash::success('Sucursal eliminada exitosamente.');
 
         return redirect(route('branches.index'));
     }

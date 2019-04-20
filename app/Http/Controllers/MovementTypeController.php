@@ -60,7 +60,7 @@ class MovementTypeController extends AppBaseController
 
         $movementType = $this->movementTypeRepository->create($input);
 
-        Flash::success('Movement Type saved successfully.');
+        Flash::success('Movimiento guardado exitosamente.');
 
         return redirect(route('movementTypes.index'));
     }
@@ -77,7 +77,7 @@ class MovementTypeController extends AppBaseController
         $movementType = $this->movementTypeRepository->findWithoutFail($id);
 
         if (empty($movementType)) {
-            Flash::error('Movement Type not found');
+            Flash::error('Movimiento no encontrado.');
 
             return redirect(route('movementTypes.index'));
         }
@@ -97,7 +97,7 @@ class MovementTypeController extends AppBaseController
         $movementType = $this->movementTypeRepository->findWithoutFail($id);
 
         if (empty($movementType)) {
-            Flash::error('Movement Type not found');
+            Flash::error('Movimiento no encontrado.');
 
             return redirect(route('movementTypes.index'));
         }
@@ -118,14 +118,14 @@ class MovementTypeController extends AppBaseController
         $movementType = $this->movementTypeRepository->findWithoutFail($id);
 
         if (empty($movementType)) {
-            Flash::error('Movement Type not found');
+            Flash::error('Movimiento no encontrado.');
 
             return redirect(route('movementTypes.index'));
         }
 
         $movementType = $this->movementTypeRepository->update($request->all(), $id);
 
-        Flash::success('Movement Type updated successfully.');
+        Flash::success('Movimiento actualizado exitosamente.');
 
         return redirect(route('movementTypes.index'));
     }
@@ -142,14 +142,14 @@ class MovementTypeController extends AppBaseController
         $movementType = $this->movementTypeRepository->findWithoutFail($id);
 
         if (empty($movementType)) {
-            Flash::error('Movement Type not found');
+            Flash::error('Movimiento no encontrado.');
 
             return redirect(route('movementTypes.index'));
         }
 
         $this->movementTypeRepository->delete($id);
 
-        Flash::success('Movement Type deleted successfully.');
+        Flash::success('Movimiento eliminado exitosamente.');
 
         return redirect(route('movementTypes.index'));
     }

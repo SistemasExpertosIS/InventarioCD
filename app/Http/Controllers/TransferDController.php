@@ -68,7 +68,7 @@ class TransferDController extends AppBaseController
 
         $transferD = $this->transferDRepository->create($input);
 
-        Flash::success('Transfer D saved successfully.');
+        Flash::success('El Traslado/Detalle se ha guardado exitosamente.');
 
         return redirect(route('transferDs.index'));
     }
@@ -85,7 +85,7 @@ class TransferDController extends AppBaseController
         $transferD = $this->transferDRepository->findWithoutFail($id);
 
         if (empty($transferD)) {
-            Flash::error('Transfer D not found');
+            Flash::error('El Traslado/Detalle no se ha encontrado.');
 
             return redirect(route('transferDs.index'));
         }
@@ -110,7 +110,7 @@ class TransferDController extends AppBaseController
         $transferD = $this->transferDRepository->findWithoutFail($id);
 
         if (empty($transferD)) {
-            Flash::error('Transfer D not found');
+            Flash::error('El Traslado/Detalle no se ha encontrado.');
 
             return redirect(route('transferDs.index'));
         }
@@ -131,14 +131,14 @@ class TransferDController extends AppBaseController
         $transferD = $this->transferDRepository->findWithoutFail($id);
 
         if (empty($transferD)) {
-            Flash::error('Transfer D not found');
+            Flash::error('El Traslado/Detalle no se ha encontrado.');
 
             return redirect(route('transferDs.index'));
         }
 
         $transferD = $this->transferDRepository->update($request->all(), $id);
 
-        Flash::success('Transfer D updated successfully.');
+        Flash::success('El Traslado/Detalle se ha actualizado exitosamente.');
 
         return redirect(route('transferDs.index'));
     }
@@ -155,14 +155,14 @@ class TransferDController extends AppBaseController
         $transferD = $this->transferDRepository->findWithoutFail($id);
 
         if (empty($transferD)) {
-            Flash::error('Transfer D not found');
+            Flash::error('El Traslado/Detalle no se ha encontrado.');
 
             return redirect(route('transferDs.index'));
         }
 
         $this->transferDRepository->delete($id);
 
-        Flash::success('Transfer D deleted successfully.');
+        Flash::success('El Traslado/Detalle se ha eliminado exitosamente.');
 
         return redirect(route('transferDs.index'));
     }
