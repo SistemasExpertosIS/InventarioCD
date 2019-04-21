@@ -30,11 +30,13 @@ class InventoryController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $this->inventoryRepository->pushCriteria(new RequestCriteria($request));
-        $inventories = $this->inventoryRepository->all();
-
-        return view('inventories.index')
-            ->with('inventories', $inventories);
+        /*$this->inventoryRepository->pushCriteria(new RequestCriteria($request));
+        $inventories = $this->inventoryRepository->all();*/
+        $inventories = DB::table('Branch as br')
+        ->select('i.id',  'br.id as Branch')
+        ->whereNull('b.deleted_at')
+        ->join('inventory as i','us.Id','=','b.idUser')->get();
+        return view('inventories.index'), compact('inventories');     
     }
 
     /**
