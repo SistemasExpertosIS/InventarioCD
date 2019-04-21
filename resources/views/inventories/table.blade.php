@@ -11,10 +11,10 @@
     <tbody>
     @foreach($inventories as $inventory)
         <tr>
-            <td>{!! $inventory->Quantity !!}</td>
-            <td>{!! $inventory->idBranch !!}</td>
-            <td>{!! $inventory->idProduct !!}</td>
-            <td>{!! $inventory->idMovementtype !!}</td>
+            <td>{!! $inventory->Cantidad !!}</td>
+            <td>{!! $inventory->Sucursal !!}</td>
+            <td>{!! $inventory->Producto !!}</td>
+            <td>{!! $inventory->TipoMovimiento !!}</td>
             <td>
                 <div class='btn-group'>
                     <a href="{!! route('inventories.show', [$inventory->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>

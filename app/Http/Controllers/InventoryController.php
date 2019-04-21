@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use Illuminate\Support\Facades\DB;
+use App\Models\MovementType;
+use App\Models\Product;
+use App\Models\Branch;
 
 class InventoryController extends AppBaseController
 {
@@ -30,11 +34,20 @@ class InventoryController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $this->inventoryRepository->pushCriteria(new RequestCriteria($request));
+        /*$this->inventoryRepository->pushCriteria(new RequestCriteria($request));
         $inventories = $this->inventoryRepository->all();
 
-        return view('inventories.index')
-            ->with('inventories', $inventories);
+        return view('inventories.index')->with('inventories', $inventories);*/
+        $inventories = DB::table('inventory as in')
+        ->select('in.id', 'in.Quantity as Cantidad', 'br.name as Sucursal', 'pr.name as Producto',
+        'tmov.Name as TipoMovimiento')
+        ->join('branch as br', 'br.Id','=','in.idBranch')
+        ->join('product as pr', 'pr.Id', '=', 'in.idProduct')
+        ->join('movementtype as tmov', 'tmov.Id', '=', 'in.idMovementType')
+        ->whereNull('in.deleted_at')
+        ->get();
+        //return $inventories;
+        return view('inventories.index')->with('inventories', $inventories);
     }
 
     /**
@@ -44,7 +57,10 @@ class InventoryController extends AppBaseController
      */
     public function create()
     {
-        return view('inventories.create');
+        $tipoMovimiento = MovementType::pluck('name','id');
+        $productos = Product::where('State', 1)->pluck('name','id');
+        $sucursales = Branch::pluck('name','id');
+        return view('inventories.create',  compact('tipoMovimiento', 'productos', 'sucursales'));
     }
 
     /**
