@@ -33,3 +33,7 @@
     <a href="{!! route('inventories.index') !!}"><i class="fa fa-clipboard" aria-hidden="true"></i><span>Inventario</span></a>
 </li>
 
+<li class="{{ Request::is('reporte*') ? 'active' : '' }}">
+    <a href="/reportes"><i class="fa fa-file" aria-hidden="true"></i><span>Inventario</span></a>
+</li>
+
