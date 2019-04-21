@@ -19,19 +19,19 @@
 <!-- Traslado -->
 <div class="form-group">
     {!! Form::label('idTransferM', 'Traslado:') !!}
-    <p>{!! $transferD->idTransferM !!}</p>
+    <p>{!! $trasladoM->Description !!}</p>
 </div>
 
 <!-- Caja -->
 <div class="form-group">
     {!! Form::label('idBox', 'Caja:') !!}
-    <p>{!! $transferD->idBox !!}</p>
+    <p>{!! $caja->Description !!}</p>
 </div>
 
 <!-- Producto -->
 <div class="form-group">
     {!! Form::label('idProduct', 'Producto:') !!}
-    <p>{!! $transferD->idProduct !!}</p>
+    <p>{!! $producto->Name !!}</p>
 </div>
 
 

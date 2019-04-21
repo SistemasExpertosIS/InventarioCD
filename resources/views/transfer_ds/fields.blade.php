@@ -13,19 +13,19 @@
 <!-- Traslado -->
 <div class="form-group col-sm-6">
     {!! Form::label('idTransferM', 'Traslado:') !!}
-    {!! Form::number('idTransferM', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idTransferM', $trasladosM, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Caja -->
 <div class="form-group col-sm-6">
     {!! Form::label('idBox', 'Caja:') !!}
-    {!! Form::number('idBox', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idBox', $cajas, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Producto -->
 <div class="form-group col-sm-6">
     {!! Form::label('idProduct', 'Producto:') !!}
-    {!! Form::number('idProduct', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idProduct', $productos, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Guardar -->

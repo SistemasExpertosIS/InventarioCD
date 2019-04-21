@@ -12,11 +12,11 @@
     <tbody>
     @foreach($transferDs as $transferD)
         <tr>
-            <td>{!! $transferD->Quantity !!}</td>
-            <td>{!! $transferD->State !!}</td>
-            <td>{!! $transferD->idTransferM !!}</td>
-            <td>{!! $transferD->idBox !!}</td>
-            <td>{!! $transferD->idProduct !!}</td>
+            <td>{!! $transferD->Cantidad !!}</td>
+            <td>{!! $transferD->Estado !!}</td>
+            <td>{!! $transferD->DescripcionTM !!}</td>
+            <td>{!! $transferD->DescripcionCaja !!}</td>
+            <td>{!! $transferD->Producto !!}</td>
             <td>
                 <div class='btn-group'>
                     <a href="{!! route('transferDs.show', [$transferD->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>

@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use Illuminate\Support\Facades\DB;
+use App\Models\Product;
+use App\Models\Box;
+use App\Models\TransferM;
 
 class TransferDController extends AppBaseController
 {
@@ -30,19 +34,24 @@ class TransferDController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $this->transferDRepository->pushCriteria(new RequestCriteria($request));
-        $transferDs = $this->transferDRepository->all();
-
+        $transferDs = DB::table('transferd as td')
+        ->select('td.id', 'td.Quantity as Cantidad', 'td.State as Estado', 'c.Description as DescripcionCaja', 'tm.Description as DescripcionTM',
+        'pr.Name as Producto')
+        ->join('box as c', 'c.Id','=','td.idBox')
+        ->join('product as pr', 'pr.Id', '=', 'td.idProduct')
+        ->join('transferm as tm', 'tm.Id', '=', 'td.idTransferM')
+        ->whereNull('td.deleted_at')
+        ->get();
+        
         foreach ($transferDs as $transferD) {
-            if($transferD->State == 1){
-                $transferD->State = "Activo";
+            if($transferD->Estado == 1){
+                $transferD->Estado = "Activo";
             }else {
-                $transferD->State = "Inactivo";
+                $transferD->Estado = "Inactivo";
             }
         }
 
-        return view('transfer_ds.index')
-            ->with('transferDs', $transferDs);
+        return view('transfer_ds.index')->with('transferDs', $transferDs);
     }
 
     /**
@@ -52,7 +61,10 @@ class TransferDController extends AppBaseController
      */
     public function create()
     {
-        return view('transfer_ds.create');
+        $trasladosM = TransferM::pluck('Description','id');
+        $cajas = Box::pluck('Description','id');
+        $productos = Product::where('State', 1)->pluck('name','id');
+        return view('transfer_ds.create', compact('trasladosM', 'cajas', 'productos'));
     }
 
     /**
@@ -89,13 +101,16 @@ class TransferDController extends AppBaseController
 
             return redirect(route('transferDs.index'));
         }
+        $trasladoM = $transferD->idtransferm()->get()[0];
+        $caja = $transferD->idbox()->get()[0];
+        $producto = $transferD->idproduct()->get()[0];
         if($transferD->State == 1){
             $transferD->State = "Activo";
         }else {
             $transferD->State = "Inactivo";
         }
 
-        return view('transfer_ds.show')->with('transferD', $transferD);
+        return view('transfer_ds.show', compact('transferD', 'trasladoM', 'caja', 'producto'));
     }
 
     /**
@@ -114,8 +129,10 @@ class TransferDController extends AppBaseController
 
             return redirect(route('transferDs.index'));
         }
-
-        return view('transfer_ds.edit')->with('transferD', $transferD);
+        $trasladosM = TransferM::pluck('Description','id');
+        $cajas = Box::pluck('Description','id');
+        $productos = Product::where('State', 1)->pluck('name','id');
+        return view('transfer_ds.edit', compact('transferD', 'trasladosM', 'cajas', 'productos'));
     }
 
     /**
