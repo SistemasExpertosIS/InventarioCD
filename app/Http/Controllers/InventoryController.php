@@ -99,7 +99,7 @@ class InventoryController extends AppBaseController
         }
 
          $sucursal = $inventory->idBranch()->get()[0];
-         return view('inventories.show')->compact('inventory', 'sucursal');
+         return view('inventories.show', compact('inventory', 'sucursal'));
     }
 
     /**

@@ -43,6 +43,7 @@ Route::get('/unauthorized', function () {
 });
 
 Route::get('/reporte-inventario','Reportes\ReportesController@totalInventario');
+Route::get('/reporte-traslado','Reportes\ReportesController@traslados');
 Route::get('/reportes', function() {
     return view('reportes.index');
 });
