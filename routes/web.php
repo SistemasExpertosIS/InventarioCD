@@ -47,6 +47,7 @@ Route::get('/reporte-traslado','Reportes\ReportesController@traslados');
 Route::get('/reporte-producto','Reportes\ReportesController@Productos');
 Route::get('/reporte-caja','Reportes\ReportesController@cajas');
 Route::get('/reporte-sucursales','Reportes\ReportesController@sucursales');
+Route::get('/reporte-transportes','Reportes\ReportesController@transportes');
 Route::get('/reportes', function() {
     return view('reportes.index');
 });

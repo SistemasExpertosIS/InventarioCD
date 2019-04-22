@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Product;
 use App\Models\User;
 use App\Models\Box;
+use App\Models\Transport;
 use Illuminate\Support\Facades\Auth;
 class ReportesController extends Controller
 {
@@ -92,6 +93,15 @@ class ReportesController extends Controller
         $pdf = \PDF::loadView('reportes.sucursales', compact('sucursales', 'usuarioRegistrado'));
       
         return $pdf->stream();
+    }
+
+    public function transportes() {
+        $usuarioRegistrado = Auth::user();
+        $transportes= Transport::get();
+        $pdf = \PDF::loadView('reportes.transportes', compact('transportes', 'usuarioRegistrado'));
+      
+       return $pdf->stream();
+
     }
 
 }
