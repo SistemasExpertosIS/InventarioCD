@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class InventarioReporteController extends Controller
+class ReportesController extends Controller
 {
     public function __construct()
     {
@@ -25,11 +25,7 @@ class InventarioReporteController extends Controller
         ->join('branch as b','in.idBranch','=','b.Id')
         ->join('product as p','in.idProduct','=','p.Id')
         ->get();
-        //var_dump($inventarios);
-        //return response()->json($inventarios, 200); 
         $pdf = \PDF::loadView('reportes.totalInventario', compact('inventarios'));
-
-      // return view('reportes.inventarioActivo',['inventarios'=>$inventarios]);
       
        return $pdf->stream();
     }

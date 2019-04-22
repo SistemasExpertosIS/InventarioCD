@@ -42,7 +42,7 @@ Route::get('/unauthorized', function () {
     return view('errors.403');
 });
 
-Route::get('/reporte-inventario','Reportes\InventarioReporteController@totalInventario');
+Route::get('/reporte-inventario','Reportes\ReportesController@totalInventario');
 Route::get('/reportes', function() {
     return view('reportes.index');
 });

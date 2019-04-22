@@ -2,9 +2,9 @@
 @section('content')
 
 <div class="container">
-    <h4 style="text-align:center;">Total de inventario</h4>
+    <h4 style="text-align:center;">Total de productos</h4>
     <h5 style="text-align:center;">Fecha: {{date('Y-m-d')}}</h5>
-    <h5 style="text-align:center;">Generado por: {{ Auth::user()->name}}</h5>
+    <!--<h5 style="text-align:center;">Generado por: {{ Auth::user()->name}}</h5>-->
     <br>
     <table class="table table-sm">
         <thead>

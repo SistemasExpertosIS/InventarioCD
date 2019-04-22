@@ -34,6 +34,6 @@
 </li>
 
 <li class="{{ Request::is('reporte*') ? 'active' : '' }}">
-    <a href="/reportes"><i class="fa fa-file" aria-hidden="true"></i><span>Inventario</span></a>
+    <a href="/reportes"><i class="fa fa-file" aria-hidden="true"></i><span>Reportes</span></a>
 </li>
 
