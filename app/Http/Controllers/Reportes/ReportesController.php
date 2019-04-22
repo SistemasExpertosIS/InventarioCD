@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Product;
 use App\Models\User;
 use App\Models\Box;
+use Illuminate\Support\Facades\Auth;
 class ReportesController extends Controller
 {
     public function __construct()
@@ -22,31 +23,35 @@ class ReportesController extends Controller
     public function Usuarios(){
 
         $usuarios= User::where('State',1)->get();
-        $pdf = \PDF::loadView('reportes.Usuarios', compact('usuarios'));
+        $usuarioRegistrado = Auth::user();
+        $pdf = \PDF::loadView('reportes.Usuarios', compact('usuarios', 'usuarioRegistrado'));
       
        return $pdf->stream();
     }
     
     public function totalInventario(){
 
+        $usuarioRegistrado = Auth::user();
         $inventarios = DB::table('inventory as in')
         ->select('in.Id','in.Quantity as Cantidad','b.Name as Sucursal', 'p.Name as Producto')
         ->join('branch as b','in.idBranch','=','b.Id')
         ->join('product as p','in.idProduct','=','p.Id')
         ->get();
-        $pdf = \PDF::loadView('reportes.totalInventario', compact('inventarios'));
+        $pdf = \PDF::loadView('reportes.totalInventario', compact('inventarios', 'usuarioRegistrado'));
       
        return $pdf->stream();
     }
       public function Productos(){
 
+        $usuarioRegistrado = Auth::user();
         $productos= Product::where('State',1)->get();
-        $pdf = \PDF::loadView('reportes.Productos', compact('productos'));
+        $pdf = \PDF::loadView('reportes.Productos', compact('productos', 'usuarioRegistrado'));
       
        return $pdf->stream();
     }
 
     public function traslados() {
+        $usuarioRegistrado = Auth::user();
         $traslados = DB::table('transferm as tm')
         ->select('tm.id', 'tm.Description', 'tmv.Name as TipoMovimiento','ur.name as UsuarioReceptor',
         'ue.name as UsuarioEmisor', 'sr.Name as SucursalReceptora', 'se.Name as SucursalEmisora', 
@@ -64,26 +69,27 @@ class ReportesController extends Controller
         ->whereNull('td.deleted_at')
         ->where('td.State', 1)
         ->get();
-        $pdf = \PDF::loadView('reportes.traslados', compact('traslados'));
+        $pdf = \PDF::loadView('reportes.traslados', compact('traslados', 'usuarioRegistrado'));
       
         return $pdf->stream();
     }
 
     public function cajas(){
-
+        $usuarioRegistrado = Auth::user();
         $cajas= Box::get();
-        $pdf = \PDF::loadView('reportes.cajas', compact('cajas'));
+        $pdf = \PDF::loadView('reportes.cajas', compact('cajas', 'usuarioRegistrado'));
       
        return $pdf->stream();
     }
 
     public function sucursales() {
+        $usuarioRegistrado = Auth::user();
         $sucursales = DB::table('users as us')
         ->select('b.id', 'b.Name', 'b.City', 'b.Abv', 'us.name as Usuario')
         ->whereNull('b.deleted_at')
         ->join('branch as b','us.Id','=','b.idUser')->get();
 
-        $pdf = \PDF::loadView('reportes.sucursales', compact('sucursales'));
+        $pdf = \PDF::loadView('reportes.sucursales', compact('sucursales', 'usuarioRegistrado'));
       
         return $pdf->stream();
     }

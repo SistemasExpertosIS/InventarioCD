@@ -4,7 +4,7 @@
 <div class="container">
     <h4 style="text-align:center;">Traslados</h4>
     <h5 style="text-align:center;">Fecha: {{date('Y-m-d')}}</h5>
-    <!--<h5 style="text-align:center;">Generado por: {{ Auth::user()->name}}</h5>-->
+    <h5 style="text-align:center;">Generado por: {{ $usuarioRegistrado->Name }}</h5>
     <br>
     <table class="table table-sm">
         <thead>
