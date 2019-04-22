@@ -98,7 +98,8 @@ class InventoryController extends AppBaseController
             return redirect(route('inventories.index'));
         }
 
-        return view('inventories.show')->with('inventory', $inventory);
+         $sucursal = $inventory->idBranch()->get()[0];
+         return view('inventories.show')->compact('inventory', 'sucursal');
     }
 
     /**
@@ -118,7 +119,11 @@ class InventoryController extends AppBaseController
             return redirect(route('inventories.index'));
         }
 
-        return view('inventories.edit')->with('inventory', $inventory);
+        $tipoMovimiento = MovementType::pluck('name','id');
+        $productos = Product::where('State', 1)->pluck('name','id');
+        $sucursales = Branch::pluck('name','id');
+        return view('inventories.edit', compact('inventory','tipoMovimiento', 'productos', 'sucursales'));
+
     }
 
     /**

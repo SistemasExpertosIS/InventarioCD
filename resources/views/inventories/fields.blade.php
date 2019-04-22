@@ -7,19 +7,19 @@
 <!-- Sucursal -->
 <div class="form-group col-sm-6">
     {!! Form::label('idBranch', 'Sucursal:') !!}
-    {!! Form::number('idBranch', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idBranch', $sucursales, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Producto -->
 <div class="form-group col-sm-6">
     {!! Form::label('idProduct', 'Producto:') !!}
-    {!! Form::number('idProduct', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idProduct', $productos, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Tipo de movimiento -->
 <div class="form-group col-sm-6">
     {!! Form::label('idMovementtype', 'Tipo de movimiento:') !!}
-    {!! Form::number('idMovementtype', null, ['class' => 'form-control']) !!}
+    {!! Form::select('idMovementtype', $tipoMovimiento, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Guardar -->
