@@ -41,8 +41,15 @@ Route::resource('inventories', 'InventoryController');
 Route::get('/unauthorized', function () {
     return view('errors.403');
 });
-
+Route::get('/reporte-usuario','Reportes\ReportesController@Usuarios');
+Route::get('/reportes', function() {
+    return view('reportes.index');
+});
 Route::get('/reporte-inventario','Reportes\ReportesController@totalInventario');
+Route::get('/reportes', function() {
+    return view('reportes.index');
+});
+Route::get('/reporte-producto','Reportes\ReportesController@Productos');
 Route::get('/reportes', function() {
     return view('reportes.index');
 });
