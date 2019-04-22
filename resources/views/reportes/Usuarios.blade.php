@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="container">
-    <h4 style="text-align:center;">Reporte de Productos</h4>
+    <h4 style="text-align:center;">Reporte de Usuarios</h4>
     <h5 style="text-align:center;">Fecha: {{date('Y-m-d')}}</h5>
     <h5 style="text-align:center;">Generado por: {{ Auth::user()->name}}</h5>
     <br>
@@ -11,19 +11,19 @@
             <tr>
                 <th>Id</th>                
                 <th>Nombre</th>
-                <th>Codigo</th>
-                <th>Descripción</th>
+                <th>Correo</th>
+                
             </tr>
 
         </thead>
         <tbody>
 
-            @foreach ($productos as $producto)
+            @foreach ($usuarios as $usuario)
                 <tr>
-                    <td>{{$producto->id}}</td>
-                    <td>{{$producto->Name}}</td>
-                    <td>{{$producto->Code}}</td>
-                    <td>{{$producto->Description}}</td>
+                    <td>{{$usuario->id}}</td>
+                    <td>{{$usuario->Name}}</td>
+                    <td>{{$usuario->email}}</td>
+                    
                 </tr>
             @endforeach
         </tbody>

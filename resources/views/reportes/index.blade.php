@@ -15,6 +15,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="text-center col-sm-12 col-md-3 col-lg-3">
+                            <h3>Usuarios</h3>
+                            <a class="btn btn-primary" target="_blank" style="margin-top: 5px;margin-bottom: 5px" href="/reporte-usuario">Ver reporte</a>
+                        </div>
+                        <div class="text-center col-sm-12 col-md-3 col-lg-3">
                             <h3>Total inventario</h3>
                             <a class="btn btn-primary" target="_blank" style="margin-top: 5px;margin-bottom: 5px" href="/reporte-inventario">Ver reporte</a>
                         </div>
