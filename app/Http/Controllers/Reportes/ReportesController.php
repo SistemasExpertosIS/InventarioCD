@@ -77,4 +77,15 @@ class ReportesController extends Controller
        return $pdf->stream();
     }
 
+    public function sucursales() {
+        $sucursales = DB::table('users as us')
+        ->select('b.id', 'b.Name', 'b.City', 'b.Abv', 'us.name as Usuario')
+        ->whereNull('b.deleted_at')
+        ->join('branch as b','us.Id','=','b.idUser')->get();
+
+        $pdf = \PDF::loadView('reportes.sucursales', compact('sucursales'));
+      
+        return $pdf->stream();
+    }
+
 }

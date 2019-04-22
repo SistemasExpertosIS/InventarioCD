@@ -34,6 +34,10 @@
                             <h3>Caja</h3>
                             <a class="btn btn-primary" target="_blank" style="margin-top: 5px;margin-bottom: 5px" href="/reporte-caja">Ver reporte</a>
                         </div>
+                        <div class="col-sm-12 col-md-3 col-lg-3">
+                            <h3>Sucursales</h3>
+                            <a class="btn btn-primary" target="_blank" style="margin-top: 5px;margin-bottom: 5px" href="/reporte-sucursales">Ver reporte</a>
+                        </div>
                     </div>
                 </div>
 
