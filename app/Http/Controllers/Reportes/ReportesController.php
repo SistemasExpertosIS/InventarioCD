@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Product;
 use App\Models\User;
+use App\Models\Box;
 class ReportesController extends Controller
 {
     public function __construct()
@@ -66,6 +67,14 @@ class ReportesController extends Controller
         $pdf = \PDF::loadView('reportes.traslados', compact('traslados'));
       
         return $pdf->stream();
+    }
+
+    public function cajas(){
+
+        $cajas= Box::get();
+        $pdf = \PDF::loadView('reportes.cajas', compact('cajas'));
+      
+       return $pdf->stream();
     }
 
 }
