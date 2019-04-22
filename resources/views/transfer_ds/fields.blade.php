@@ -1,7 +1,7 @@
 <!-- Cantidad -->
 <div class="form-group col-sm-6">
     {!! Form::label('Quantity', 'Cantidad:') !!}
-    {!! Form::number('Quantity', null, ['class' => 'form-control', 'required']) !!}
+    {!! Form::number('Quantity', null, ['class' => 'form-control', 'required','min'=>'0']) !!}
 </div>
 
 <!-- Estado -->
