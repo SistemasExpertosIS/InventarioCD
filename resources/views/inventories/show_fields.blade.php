@@ -13,7 +13,7 @@
 <!-- Sucursal -->
 <div class="form-group">
     {!! Form::label('idBranch', 'Sucursal:') !!}
-    <p>{!! $inventory->idBranch !!}</p>
+    <p>{!! $sucursal->Name !!}</p>
 </div>
 
 <!-- Producto -->
