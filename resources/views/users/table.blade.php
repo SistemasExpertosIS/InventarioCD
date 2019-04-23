@@ -5,7 +5,7 @@
         <th>Correo electrónico</th>
         <th>Estado</th>
         <th>Rol</th>
-        <th colspan="3">Acción</th>
+        <th>Acción</th>
         </tr>
     </thead>
     <tbody>

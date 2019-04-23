@@ -3,7 +3,7 @@
         <tr>
             <th>Cantidad</th>
         <th>Descripción</th>
-            <th colspan="3">Acción</th>
+            <th>Acción</th>
         </tr>
     </thead>
     <tbody>

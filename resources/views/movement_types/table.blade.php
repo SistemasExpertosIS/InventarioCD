@@ -4,7 +4,7 @@
         <th>Nombre</th>
         <th>Abreviatura</th>
         <th>Entrada</th>
-        <th colspan="3">Acción</th>
+        <th>Acción</th>
         </tr>
     </thead>
     <tbody>

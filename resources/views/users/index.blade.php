@@ -25,6 +25,13 @@
     @include('users.confirmdelete')
     @section('scripts')
     <script>
+        $(document).ready(function() {
+            $('#users-table').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            });
+        });
         $('#borrarUsuario').on('show.bs.modal', function (e) {
             var dataId = $(e.relatedTarget).data('id');
             var form = $('#formBorrarUsuario');

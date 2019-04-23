@@ -25,6 +25,13 @@
     @include('boxes.confirmdelete')
     @section('scripts')
     <script>
+        $(document).ready(function() {
+            $('#boxes-table').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            });
+        });
         $('#borrarCaja').on('show.bs.modal', function (e) {
             var dataId = $(e.relatedTarget).data('id');
             var form = $('#formBorrarCaja');
