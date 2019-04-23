@@ -2,7 +2,7 @@
     <thead>
         <tr>
             <th>Cantidad</th>
-        <th>Descripción</th>
+            <th>Descripción</th>
             <th>Acción</th>
         </tr>
     </thead>
