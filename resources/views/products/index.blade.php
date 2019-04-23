@@ -25,6 +25,14 @@
     @include('products.confirmdelete')
     @section('scripts')
     <script>
+        $(document).ready(function() {
+            $('#products-table').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+                }
+            });
+        });
+
         $('#borrarProducto').on('show.bs.modal', function (e) {
             var dataId = $(e.relatedTarget).data('id');
             var form = $('#formBorrarProducto');

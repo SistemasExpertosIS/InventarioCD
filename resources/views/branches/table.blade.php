@@ -2,10 +2,10 @@
     <thead>
         <tr>
             <th>Nombre</th>
-        <th>Ciudad</th>
-        <th>Abreviatura</th>
-        <th>Usuario</th>
-            <th colspan="3">Acción</th>
+            <th>Ciudad</th>
+            <th>Abreviatura</th>
+            <th>Usuario</th>
+            <th>Acción</th>
         </tr>
     </thead>
     <tbody>

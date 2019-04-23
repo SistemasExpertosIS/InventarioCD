@@ -1,14 +1,14 @@
-<table class="table table-responsive" id="transferMs-table">
+<table class="table table-responsive" id="transferM-table">
     <thead>
         <tr>
-        <th>Descripción</th>
-        <th>Tipo de movimiento</th>
-        <th>Usuario receptor</th>
-        <th>Usuario emisor</th>
-        <th>Sucursal receptora</th>
-        <th>Sucursal emisora</th>
-        <th>Transporte</th>
-        <th colspan="3">Acción</th>
+            <th>Descripción</th>
+            <th>Tipo de movimiento</th>
+            <th>Usuario receptor</th>
+            <th>Usuario emisor</th>
+            <th>Sucursal receptora</th>
+            <th>Sucursal emisora</th>
+            <th>Transporte</th>
+            <th>Acción</th>
         </tr>
     </thead>
     <tbody>

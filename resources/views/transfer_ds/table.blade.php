@@ -1,12 +1,12 @@
-<table class="table table-responsive" id="transferDs-table">
+<table class="table table-responsive" id="transferD-table">
     <thead>
         <tr>
-        <th>Cantidad</th>
-        <th>Estado</th>
-        <th>Traslado</th>
-        <th>Caja</th>
-        <th>Producto</th>
-        <th colspan="3">Acción</th>
+            <th>Cantidad</th>
+            <th>Estado</th>
+            <th>Traslado</th>
+            <th>Caja</th>
+            <th>Producto</th>
+            <th>Acción</th>
         </tr>
     </thead>
     <tbody>

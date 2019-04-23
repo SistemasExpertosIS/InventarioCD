@@ -1,10 +1,10 @@
 <table class="table table-responsive" id="transports-table">
     <thead>
         <tr>
-        <th>Placa</th>
-        <th>Nombre del Conductor</th>
-        <th>ID del Conductor</th>
-        <th colspan="3">Acción</th>
+            <th>Placa</th>
+            <th>Nombre del Conductor</th>
+            <th>ID del Conductor</th>
+            <th>Acción</th>
         </tr>
     </thead>
     <tbody>

@@ -2,10 +2,10 @@
     <thead>
         <tr>
             <th>Nombre</th>
-        <th>Código</th>
-        <th>Descripción</th>
-        <th>Estado</th>
-            <th colspan="3">Acción</th>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th>Acción</th>
         </tr>
     </thead>
     <tbody>
