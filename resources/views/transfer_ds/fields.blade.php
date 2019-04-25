@@ -4,11 +4,6 @@
     {!! Form::number('Quantity', null, ['class' => 'form-control', 'required','min'=>'0']) !!}
 </div>
 
-<!-- Estado -->
-<div class="form-group col-sm-6">
-    {!! Form::label('State', 'Estado:') !!}
-    {!! Form::select('State', ['1' => 'Activo', '0' => 'Inactivo'], null, ['class' => 'form-control']) !!}
-</div>
 
 <!-- Traslado -->
 <div class="form-group col-sm-6">

@@ -34,7 +34,6 @@ class TransferD extends Model
 
     public $fillable = [
         'Quantity',
-        'State',
         'idTransferM',
         'idBox',
         'idProduct'
@@ -48,7 +47,6 @@ class TransferD extends Model
     protected $casts = [
         'id' => 'integer',
         'Quantity' => 'string',
-        'State' => 'string',
         'idTransferM' => 'integer',
         'idBox' => 'integer',
         'idProduct' => 'integer'

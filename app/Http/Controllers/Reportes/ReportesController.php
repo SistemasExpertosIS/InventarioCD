@@ -37,6 +37,7 @@ class ReportesController extends Controller
         ->select('in.Id','in.Quantity as Cantidad','b.Name as Sucursal', 'p.Name as Producto')
         ->join('branch as b','in.idBranch','=','b.Id')
         ->join('product as p','in.idProduct','=','p.Id')
+        ->whereNull('in.deleted_at')
         ->get();
         $pdf = \PDF::loadView('reportes.totalInventario', compact('inventarios', 'usuarioRegistrado'));
       
@@ -68,7 +69,7 @@ class ReportesController extends Controller
         ->join('product as p', 'p.Id', '=', 'td.idProduct')
         ->whereNull('tm.deleted_at')
         ->whereNull('td.deleted_at')
-        ->where('td.State', 1)
+        //->where('td.State', 1)
         ->get();
         $pdf = \PDF::loadView('reportes.traslados', compact('traslados', 'usuarioRegistrado'));
       

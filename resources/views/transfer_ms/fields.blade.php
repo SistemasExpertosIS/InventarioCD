@@ -39,6 +39,11 @@
     {!! Form::label('idTransport', 'Transporte:') !!}
     {!! Form::select('idTransport', $transportes, null, ['class' => 'form-control']) !!}
 </div>
+<!-- Estado -->
+<div class="form-group col-sm-6">
+    {!! Form::label('State', 'Estado:') !!}
+    {!! Form::select('State', ['Pendiente' => 'Pendiente'], null, ['class' => 'form-control']) !!}
+</div>
 
 <!-- Guardar -->
 <div class="form-group col-sm-12">

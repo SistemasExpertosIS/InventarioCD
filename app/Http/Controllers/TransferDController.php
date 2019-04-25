@@ -67,6 +67,22 @@ class TransferDController extends AppBaseController
         return view('transfer_ds.create', compact('trasladosM', 'cajas', 'productos'));
     }
 
+    public function crear($id)
+    {
+        $trasladosM = TransferM::where('id', $id)->pluck('Description','id');
+        $trasladosM2 = TransferM::find($id);
+        $cajas = Box::pluck('Description','id');
+        $sucursalEmisora = $trasladosM2->idbranchsends()->get()[0];
+        $productos = DB::table('inventory as in')
+        ->select('p.Name as name', 'p.id')
+        ->join('product as p', 'p.Id','=','in.idProduct')
+        ->where('in.idBranch', $sucursalEmisora->id)
+        ->whereNull('in.deleted_at')
+        ->pluck('name','id');
+        return view('transfer_ds.create', compact('trasladosM', 'cajas', 'productos'));
+        //return $productos;
+    }
+
     /**
      * Store a newly created TransferD in storage.
      *
@@ -82,7 +98,7 @@ class TransferDController extends AppBaseController
 
         Flash::success('El Traslado/Detalle se ha guardado exitosamente.');
 
-        return redirect(route('transferDs.index'));
+        return redirect(route('transferMs.index'));
     }
 
     /**

@@ -16,6 +16,7 @@ class CreatetransfermsTable extends Migration
         Schema::create('transferm', function (Blueprint $table) {
             $table->integer('id', true);
             $table->string('Description');
+            $table->string('State');
             $table->integer('idMovementType', false);
             $table->integer('idUserReceives', false);
             $table->integer('idUserSends', false);

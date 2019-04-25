@@ -16,7 +16,7 @@ class CreatetransferdsTable extends Migration
         Schema::create('transferd', function (Blueprint $table) {
             $table->integer('id', true);
             $table->string('Quantity');
-            $table->string('State');
+            //$table->string('State');
             $table->integer('idTransferM', false);
             $table->integer('idBox', false);
             $table->integer('idProduct', false);

@@ -43,6 +43,7 @@ class TransferM extends Model
         'idMovementType',
         'idUserReceives',
         'idUserSends',
+        'State',
         'idBranchReceives',
         'idBranchSends',
         'idTransport'
@@ -57,7 +58,8 @@ class TransferM extends Model
         'id' => 'integer',
         'Description' => 'string',
         'idMovementType' => 'integer',
-        'idUserReceives' => 'integer',
+        'idUserReceives' => 'integer',        
+        'State' => 'string',
         'idUserSends' => 'integer',
         'idBranchReceives' => 'integer',
         'idBranchSends' => 'integer',

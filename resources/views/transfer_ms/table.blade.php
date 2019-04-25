@@ -2,12 +2,11 @@
     <thead>
         <tr>
             <th>Descripción</th>
-            <th>Tipo de movimiento</th>
-            <th>Usuario receptor</th>
+            <th>Movimiento</th>
             <th>Usuario emisor</th>
             <th>Sucursal receptora</th>
             <th>Sucursal emisora</th>
-            <th>Transporte</th>
+            <th>Estado</th>
             <th>Acción</th>
         </tr>
     </thead>
@@ -16,17 +15,24 @@
         <tr>
             <td>{!! $transferM->Description !!}</td>
             <td>{!! $transferM->TipoMovimiento !!}</td>
-            <td>{!! $transferM->UsuarioReceptor !!}</td>
             <td>{!! $transferM->UsuarioEmisor !!}</td>
             <td>{!! $transferM->SucursalReceptora !!}</td>
             <td>{!! $transferM->SucursalEmisora !!}</td>
-            <td>{!! $transferM->Placa !!}</td>
-            <td>                
-                <div class='btn-group'>
-                    <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                    <a href="{!! route('transferMs.edit', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferM" data-id="{{ $transferM->id }}"><i class="glyphicon glyphicon-trash"></i></a>
-                </div>
+            <td>{!! $transferM->State !!}</td>
+            <td>       
+                @if ($transferM->UsuarioEmisor == $usuarioRegistrado->Name)         
+                    <div class='btn-group'>
+                        <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                        <a class="btn btn-primary btn-xs" href="{!! route('transferDs.crear', [$transferM->id]) !!}"><i class="fa fa-plus-square"></i></a>                      
+                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferM" data-id="{{ $transferM->id }}"><i class="glyphicon glyphicon-trash"></i></a>
+                    </div>
+                @else
+                    <div class='btn-group'>                        
+                        <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                        <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="fa fa-check-square"></i></a>
+                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferM" data-id="{{ $transferM->id }}"><i class="fa fa-times-circle"></i></a>
+                    </div>
+                @endif
             </td>
         </tr>        
     @endforeach
