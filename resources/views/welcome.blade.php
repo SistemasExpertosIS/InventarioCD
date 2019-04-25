@@ -101,7 +101,7 @@
 
             <div class="content">
                 <div class="links">
-                    <a data-toggle="modal" href="#myDocs">Documentación</a>
+                    <a data-toggle="modal" href="#" data-target="#myDocs">Documentación</a>
                     <a data-toggle="modal" href="#myWho">Quienes Somos</a>
                     <a data-toggle="modal" href="#myContactos">Contactos</a>
                 </div>
@@ -110,14 +110,17 @@
         <div>
                     <!-- Modal Documentacion-->
           <div class="modal" id="myDocs" role="dialog">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h1 class="modal-title">Documentación</h1>
+                  <h1 class="modal-title text-center" style="color:black;">Documentación</h1>
                 </div>
                 <div class="modal-body">
-                     <p>Documentos STI</p>
+                     <h4 style="color:black; padding-left: 19px;">El presente sistema ha sido creado por el Ing. Luis Maradiga y la Ing. Marian
+                        Padilla como evaluación práctica del contenido visto en la clase de Sistemas
+                        Expertos(IS-912) I-PAC-2019 impartida por el Ingeniero Constantino Sorto en la Universidad Nacional Autonóma de Honduras.
+                    </h4>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
