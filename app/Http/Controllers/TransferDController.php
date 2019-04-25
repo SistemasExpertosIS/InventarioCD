@@ -86,12 +86,32 @@ class TransferDController extends AppBaseController
     public function store(CreateTransferDRequest $request)
     {
         $input = $request->all();
+        //return $input;
+        $cantidad = $request->Quantity;
+        $idProducto = $request->idProduct;
+        $sucursalEmisora = DB::table('transferm as tm')
+        ->select('br.id as sucursalEmisoraId')
+        ->join('branch as br', 'br.Id', '=', 'tm.idBranchSends')
+        ->whereNull('br.deleted_at')
+        ->where('tm.id', $request->idTransferM)
+        ->first();
+        $cantidadInv = DB::table('transferd as td')
+        ->select('in.Quantity')
+        ->join('product as p', 'p.Id', '=', 'td.idProduct')
+        ->join('inventory as in', 'in.idProduct','=','p.id')
+        ->whereNull('in.deleted_at')
+        ->where('in.idBranch', $sucursalEmisora->sucursalEmisoraId)
+        ->first();
+        if ($cantidadInv->Quantity < $cantidad) {
+            Flash::error('La cantidad del movimiento no puede ser mayor a la existencia de inventario');
+            return redirect(route('transferMs.index'));
+        }
+        else {                       
+            $transferD = $this->transferDRepository->create($input);
+            Flash::success('El Traslado/Detalle se ha guardado exitosamente.');
+            return redirect(route('transferMs.index'));
+        }
 
-        $transferD = $this->transferDRepository->create($input);
-
-        Flash::success('El Traslado/Detalle se ha guardado exitosamente.');
-
-        return redirect(route('transferMs.index'));
     }
 
     /**

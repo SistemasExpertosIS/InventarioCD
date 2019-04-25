@@ -36,23 +36,8 @@ class TransferMController extends AppBaseController
      */
     public function index(Request $request)
     {
-        /*$this->transferMRepository->pushCriteria(new RequestCriteria($request));
-        $transferMs = $this->transferMRepository->all();
-
-        return view('transfer_ms.index')->with('transferMs', $transferMs);*/
         $usuarioRegistrado = Auth::user();
         $transferMs = DB::table('transferm as tm')
-        /*->select('tm.id', 'tm.Description', 'ur.name as UsuarioReceptor', 'ue.name as UsuarioEmisor',
-        'sr.Name as SucursalReceptora', 'se.Name as SucursalEmisora', 'tr.Plate as Placa', 
-        'tmv.Name as TipoMovimiento')
-        ->join('users as ur', 'ur.Id','=','tm.idUserReceives')
-        ->join('users as ue', 'ue.Id', '=', 'tm.idUserSends')
-        ->join('branch as sr', 'sr.Id', '=', 'tm.idBranchReceives')
-        ->join('branch as se', 'se.Id', '=', 'tm.idBranchSends')
-        ->join('transport as tr', 'tr.Id', '=', 'tm.idTransport')
-        ->join('movementtype as tmv', 'tmv.Id', '=', 'tm.idMovementType')
-        ->whereNull('tm.deleted_at')
-        ->get();*/
         ->select('tm.id', 'tm.Description', 'tm.State', 'ue.name as UsuarioEmisor',
         'sr.Name as SucursalReceptora', 'se.Name as SucursalEmisora', 
         'tmv.Name as TipoMovimiento')
@@ -61,18 +46,8 @@ class TransferMController extends AppBaseController
         ->join('branch as sr', 'sr.Id', '=', 'tm.idBranchReceives')
         ->join('branch as se', 'se.Id', '=', 'tm.idBranchSends')
         ->join('movementtype as tmv', 'tmv.Id', '=', 'tm.idMovementType')
-        //->join('transferd as td', 'td.idTransferM', '=', 'tm.Id')
-        //->join('product as p', 'p.Id', '=', 'td.idProduct')
         ->whereNull('tm.deleted_at')
-        //->where('ur.Name', Auth::user()->Name)
         ->get();
-        /*foreach ($transferMs as $transferM) {
-            if($transferM->Estado == 1){
-                $transferM->Estado = "Aceptado";
-            }else {
-                $transferM->Estado = "Pendiente";
-            }
-        }*/
         return view('transfer_ms.index', compact('transferMs', 'usuarioRegistrado'));
     }
 
