@@ -10,11 +10,6 @@
     <p>{!! $transferD->Quantity !!}</p>
 </div>
 
-<!-- Estado -->
-<div class="form-group">
-    {!! Form::label('State', 'Estado:') !!}
-    <p>{!! $transferD->State !!}</p>
-</div>
 
 <!-- Traslado -->
 <div class="form-group">

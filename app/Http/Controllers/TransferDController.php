@@ -35,7 +35,7 @@ class TransferDController extends AppBaseController
     public function index(Request $request)
     {
         $transferDs = DB::table('transferd as td')
-        ->select('td.id', 'td.Quantity as Cantidad', 'td.State as Estado', 'c.Description as DescripcionCaja', 'tm.Description as DescripcionTM',
+        ->select('td.id', 'td.Quantity as Cantidad', 'c.Description as DescripcionCaja', 'tm.Description as DescripcionTM',
         'pr.Name as Producto')
         ->join('box as c', 'c.Id','=','td.idBox')
         ->join('product as pr', 'pr.Id', '=', 'td.idProduct')
@@ -43,13 +43,6 @@ class TransferDController extends AppBaseController
         ->whereNull('td.deleted_at')
         ->get();
         
-        foreach ($transferDs as $transferD) {
-            if($transferD->Estado == 1){
-                $transferD->Estado = "Activo";
-            }else {
-                $transferD->Estado = "Inactivo";
-            }
-        }
 
         return view('transfer_ds.index')->with('transferDs', $transferDs);
     }
@@ -120,11 +113,6 @@ class TransferDController extends AppBaseController
         $trasladoM = $transferD->idtransferm()->get()[0];
         $caja = $transferD->idbox()->get()[0];
         $producto = $transferD->idproduct()->get()[0];
-        if($transferD->State == 1){
-            $transferD->State = "Activo";
-        }else {
-            $transferD->State = "Inactivo";
-        }
 
         return view('transfer_ds.show', compact('transferD', 'trasladoM', 'caja', 'producto'));
     }

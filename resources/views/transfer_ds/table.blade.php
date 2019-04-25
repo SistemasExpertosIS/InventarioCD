@@ -2,7 +2,6 @@
     <thead>
         <tr>
             <th>Cantidad</th>
-            <th>Estado</th>
             <th>Traslado</th>
             <th>Caja</th>
             <th>Producto</th>
@@ -13,7 +12,6 @@
     @foreach($transferDs as $transferD)
         <tr>
             <td>{!! $transferD->Cantidad !!}</td>
-            <td>{!! $transferD->Estado !!}</td>
             <td>{!! $transferD->DescripcionTM !!}</td>
             <td>{!! $transferD->DescripcionCaja !!}</td>
             <td>{!! $transferD->Producto !!}</td>

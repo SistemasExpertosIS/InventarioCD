@@ -25,9 +25,9 @@
     <a href="{!! route('transferMs.index') !!}"><i class="fa fa-check-square" aria-hidden="true"></i><span>Traslados M</span></a>
 </li>
 
-<li class="{{ Request::is('transferDs*') ? 'active' : '' }}">
+<!--<li class="{{ Request::is('transferDs*') ? 'active' : '' }}">
     <a href="{!! route('transferDs.index') !!}"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>Traslados D</span></a>
-</li>
+</li>-->
 
 <li class="{{ Request::is('inventories*') ? 'active' : '' }}">
     <a href="{!! route('inventories.index') !!}"><i class="fa fa-clipboard" aria-hidden="true"></i><span>Inventario</span></a>
