@@ -137,6 +137,8 @@ class TransferDController extends AppBaseController
         return view('transfer_ds.show', compact('transferD', 'trasladoM', 'caja', 'producto'));
     }
 
+    
+
     /**
      * Show the form for editing the specified TransferD.
      *

@@ -15,6 +15,8 @@ use App\Models\MovementType;
 use App\Models\User;
 use App\Models\Branch;
 use App\Models\Transport;
+use App\Models\TransferM;
+use App\Models\TransferD;
 use Illuminate\Support\Facades\Auth;
 
 class TransferMController extends AppBaseController
@@ -62,8 +64,11 @@ class TransferMController extends AppBaseController
         $usuarios = User::where('State', 1)->pluck('name','id');
         $sucursales = Branch::pluck('name','id');
         $transportes = Transport::pluck('plate','id');
-        return view('transfer_ms.create', compact('tipoMovimiento','usuarios',
-                                                'sucursales', 'transportes'));
+        $idUsuarioRegistrado = auth()->id();
+        $UsuarioRegistrado = auth()->user()->Name;
+        $usuarioR = collect([$idUsuarioRegistrado => $UsuarioRegistrado]);
+        return view('transfer_ms.create', compact('usuarioR', 'tipoMovimiento','usuarios',
+                                                'sucursales', 'transportes', 'usuarioRegistrado', 'idUsuarioRegistrado'));
     }
 
     /**
@@ -110,6 +115,42 @@ class TransferMController extends AppBaseController
         return view('transfer_ms.show', compact('transferM', 'tipoMovimiento', 'usuarioReceptor',
                                                 'usuarioEmisor', 'sucursalReceptora',
                                                 'sucursalEmisora', 'transporte'));
+    }
+
+    public function movimiento($id) 
+    {
+        $transferM = $this->transferMRepository->findWithoutFail($id);
+        $transferD = TransferD::where("idTransferM", $transferM->id)->first();
+        $cantidad = $transferD->Quantity;
+        $idProducto = $transferD->idProduct;
+
+        DB::table('inventory')
+            ->where('idBranch', $transferM->idBranchSends)
+            ->where('idProduct', $idProducto)
+            ->decrement('Quantity', $cantidad);
+        DB::table('inventory')
+            ->where('idBranch', $transferM->idBranchReceives)
+            ->where('idProduct', $idProducto)
+            ->increment('Quantity', $cantidad);
+
+        $transferM->State = 'Aceptado';
+        $transferM->save();
+
+        Flash::success('Traslado/Movimiento aceptado con éxito');
+
+        return redirect(route('transferMs.index'));
+    }
+
+    public function rechazarMovimiento($id) 
+    {
+        $transferM = $this->transferMRepository->findWithoutFail($id);
+
+        $transferM->State = 'Rechazado';
+        $transferM->save();
+
+        Flash::success('El Traslado/Movimiento ha sido rechazado');
+
+        return redirect(route('transferMs.index'));
     }
 
     /**

@@ -19,7 +19,7 @@
 <!-- Usuario emisor -->
 <div class="form-group col-sm-6">
     {!! Form::label('idUserSends', 'Usuario emisor:') !!}
-    {!! Form::select('idUserSends', $usuarios, null, ['class' => 'form-control']) !!}
+    {!! Form::select('idUserSends', $usuarioR, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Sucursal receptora -->

@@ -49,6 +49,8 @@ Route::get('/reporte-caja','Reportes\ReportesController@cajas');
 Route::get('/reporte-sucursales','Reportes\ReportesController@sucursales');
 Route::get('/reporte-transportes','Reportes\ReportesController@transportes');
 Route::get('/transferDs/{transferD}/crear','TransferDController@crear')->name('transferDs.crear');
+Route::get('/transferMs/{transferM}/movimiento','TransferMController@movimiento')->name('transferMs.movimiento');
+Route::get('/transferMs/{transferM}/rechazarMovimiento','TransferMController@rechazarMovimiento')->name('transferMs.rechazarMovimiento');
 Route::get('/reportes', function() {
     return view('reportes.index');
 });

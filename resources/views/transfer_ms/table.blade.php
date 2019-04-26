@@ -20,17 +20,17 @@
             <td>{!! $transferM->SucursalEmisora !!}</td>
             <td>{!! $transferM->State !!}</td>
             <td>       
-                @if ($transferM->UsuarioEmisor == $usuarioRegistrado->Name)         
-                    <div class='btn-group'>
+                @if ($transferM->State == "Pendiente" && $transferM->UsuarioEmisor == $usuarioRegistrado->Name)
+                    <div class='btn-group'>  
+                        <a class="btn btn-primary btn-xs" href="{!! route('transferDs.crear', [$transferM->id]) !!}"><i class="fa fa-plus-square"></i></a>                       
                         <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                        <a class="btn btn-primary btn-xs" href="{!! route('transferDs.crear', [$transferM->id]) !!}"><i class="fa fa-plus-square"></i></a>                      
-                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferM" data-id="{{ $transferM->id }}"><i class="glyphicon glyphicon-trash"></i></a>
+                        <a href="{!! route('transferMs.movimiento', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="fa fa-check-square"></i></a>
+                        <a href="{!! route('transferMs.rechazarMovimiento', [$transferM->id]) !!}"class="btn btn-danger btn-xs"><i class="fa fa-times-circle"></i></a>
                     </div>
                 @else
                     <div class='btn-group'>                        
                         <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                        <a href="{!! route('transferMs.show', [$transferM->id]) !!}" class='btn btn-default btn-xs'><i class="fa fa-check-square"></i></a>
-                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferM" data-id="{{ $transferM->id }}"><i class="fa fa-times-circle"></i></a>
+                        <a href="#" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#borrarTransferM" data-id="{{ $transferM->id }}"><i class="glyphicon glyphicon-trash"></i></a>
                     </div>
                 @endif
             </td>
